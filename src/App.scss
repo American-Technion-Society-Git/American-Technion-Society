@@ -925,11 +925,13 @@ h4 {
         margin-bottom: 3rem;
     }
 
-    .stories_grid {
+        .stories_grid {
         display: grid;
         grid-template-columns: repeat(4, minmax(0, 1fr));
         gap: 1rem;
-
+        .grid_box:nth-child(10) ~ .grid_box{
+            display: none;
+        }
         .grid_box {
             overflow: hidden;
 
