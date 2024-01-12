@@ -98,6 +98,7 @@ const Stories = () => {
                 featured_image: imgUrl,
                 id: unique_id
             });
+            document.getElementById('story-page-open-modal').click()
             setDescription('');
             setStoryEmail("")
             setDesignation("")
@@ -136,6 +137,39 @@ const Stories = () => {
 
     return (
         <>
+        <div className="modal fade myModal" id="storyPageModal" tabIndex="-1" aria-labelledby="storyModalLabel" aria-hidden="true">
+                <div className="modal-dialog modal-lg">
+                    <div className="modal-content">
+                        <div className="modal-header">
+                            <h5 className="modal-title" id="storyModalLabel">Story Submitted</h5>
+                            <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        
+                               
+                               <div className="modal-body thanks">
+                                    <svg width="72" height="72" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M35.8646 0.5C16.3895 0.5 0.519531 16.37 0.519531 35.8451C0.519531 55.3203 16.3895 71.1902 35.8646 71.1902C55.3398 71.1902 71.2097 55.3203 71.2097 35.8451C71.2097 16.37 55.3398 0.5 35.8646 0.5ZM48.5535 30.8614L36.1121 43.3029C35.5819 43.8331 34.9103 44.0805 34.2387 44.0805C33.5672 44.0805 32.8603 43.8331 32.3655 43.3029L26.1447 37.0822C25.0844 36.0572 25.0844 34.3606 26.1447 33.3356C27.1697 32.3106 28.8663 32.3106 29.8913 33.3356L34.2387 37.6831L44.8069 27.1149C45.832 26.0899 47.4932 26.0899 48.5535 27.1149C49.5785 28.1399 49.5785 29.8364 48.5535 30.8614Z" fill="#114A99" />
+                                    </svg>
+
+                                    <h4>Thank you for your Submission</h4>
+                                </div>
+                               
+                               
+                                    <div className="modal-footer">
+                                        <div className='btn_wrapper'>
+                                            <button id='close-btn' type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                           
+                                        </div>
+                                    </div>
+                               
+                        
+                    </div>
+                </div>
+            </div>
+
+            <button id='story-page-open-modal' style={{ visibility: "collapse", position: "absolute" }} type="button" className="btn btn-primary" data-bs-toggle="modal" data-bs-target="#storyPageModal">
+                Launch demo modal
+            </button>
             <div id='viewport'>
                 <div id='content'>
                     <nav className="navbar fixed-top navbar-expand-lg" id="navbar">
@@ -172,7 +206,7 @@ const Stories = () => {
 
 
                     <section className='stories-container'>
-                        <div className='conatiner-fluid'>
+                        <div className='conatiner-fluid' style={{width:"100%"}} >
                             <h1>Submit My Story</h1>
                         </div>
                 
