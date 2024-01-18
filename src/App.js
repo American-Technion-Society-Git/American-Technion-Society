@@ -184,15 +184,17 @@ function App() {
   return (
     <div className="App">
      
-      //  <Routes>
-      //   <Route path='/' element={<Home data={data} blog={blog} roadmap={roadmapData} values={values} />} />
-      //   <Route path='/login' element={<SignIn />} />
-      //   <Route path='/admin' element={<Admin data={data} blog={blog} yearsBlog={yearsBlog} roadmap={roadmapData} values={values} />} />
-      //   <Route path='/100-years-of-innovation' element={<About blog={blog} roadmap={roadmapData} />} />
-      //   <Route path='/ats-family' element={<Family data={data} />} />
-      //   <Route path='/mystory' element={<Stories />}/>
-      //   <Route path='/reimagining-the-next-100-years' element={<NextYears blog={yearsBlog} />} />
-      // </Routes>
+    {/*
+     <Routes>
+         <Route path='/' element={<Home data={data} blog={blog} roadmap={roadmapData} values={values} />} />
+         <Route path='/login' element={<SignIn />} />
+         <Route path='/admin' element={<Admin data={data} blog={blog} yearsBlog={yearsBlog} roadmap={roadmapData} values={values} />} />
+         <Route path='/100-years-of-innovation' element={<About blog={blog} roadmap={roadmapData} />} />
+         <Route path='/ats-family' element={<Family data={data} />} />
+         <Route path='/mystory' element={<Stories />}/>
+         <Route path='/reimagining-the-next-100-years' element={<NextYears blog={yearsBlog} />} />
+       </Routes>
+    */}
     
 
     </div>
