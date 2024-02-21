@@ -22,7 +22,7 @@ function App() {
 
   // useEffect(() => {
   //   // navigate('https://ats.org/centennial/')
-    window.location.href = 'https://ats.org/centennial/'
+   // window.location.href = 'https://ats.org/centennial/'
   // }, [])
   
 
@@ -184,7 +184,7 @@ function App() {
   return (
     <div className="App">
      
-    {/*
+    {
      <Routes>
         <Route path='/' element={<Home data={data} blog={blog} roadmap={roadmapData} values={values} />} />
         <Route path='/login' element={<SignIn />} />
@@ -194,7 +194,7 @@ function App() {
         <Route path='/mystory' element={<Stories />}/>
         <Route path='/reimagining-the-next-100-years' element={<NextYears blog={yearsBlog} />} />
       </Routes>
-    */}
+    }
     
 
     </div>
