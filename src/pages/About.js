@@ -106,8 +106,7 @@ const About = ({ blog, roadmap }) => {
                             <div className="heading">
                                 <h2>
 
-                                    Reimagining the Next 100 Years
-
+                                The University that Built a Nation
                                 </h2>
                             </div>
                             <div className="wrapper">

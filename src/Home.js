@@ -185,6 +185,11 @@ const Home = ({ data, blog, roadmap, values }) => {
         }
     };
 
+    function Capitalize(string){
+        return string.charAt(0).toUpperCase() + string.slice(1).toLowerCase();
+
+        }
+        
     return (
         <React.Fragment>
             <div className="modal fade .modal-fullscreen" id="blogModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -251,16 +256,23 @@ const Home = ({ data, blog, roadmap, values }) => {
                                                     “I grew up in the Technion;
                                                     it was really central to my identity,” the former prime minister
                                                     said in a recent interview with ATS staff.
+                                                    </p>
+                                                    <p>
                                                     His father, Jim Bennett, worked in the Technion’s fundraising department. “Every Friday,
                                                     my family would go to the Technion pool, and I’d watch my f
                                                     ather play basketball. It was just a
                                                     fundamental part of who I was.”
+                                                    </p>
+                                                    <p>
                                                     Growing up in the Technion’s shadow also created high expectations and pride. “The
                                                     Technion projected an aura of excellence and science into the city.”
                                                     The Technion’s leading role in hig
                                                     h tech and entrepreneurship also clearly impacted the
                                                     former prime minister. In 1996, Mr. Bennett began pursuing a degree in law at The Hebrew
-                                                    University of Jerusalem, while at the same time starting work for a software company. By
+                                                    University of Jerusalem, while at the same time starting work for a software company.
+                                                    </p>
+                                                    <p>
+                                                     By
                                                     1999, he had co
                                                     -
                                                     founded
@@ -283,6 +295,8 @@ const Home = ({ data, blog, roadmap, values }) => {
                                                     n
                                                     cloud computing services. That company was sold to Asurion, another American company, for
                                                     $130 million in 2013.
+                                                    </p>
+                                                    <p>
                                                     Prior to, during, and following Mr. Bennett’s high
                                                     -
                                                     tech career, he assumed strategic roles in
@@ -293,6 +307,8 @@ const Home = ({ data, blog, roadmap, values }) => {
                                                     operating behind enemy lines. While he was living in the United States, he repeatedly traveled
                                                     to Israel to perform reserve duty. He served during both intifadas and in the second Lebanon
                                                     War in 2006.
+                                                    </p>
+                                                    <p>
                                                     Mr. Bennett’
                                                     s political career began in earnest in 2012 when he became the leader of the
                                                     Jewish Home party. Between 2013 and 2021 he held significant cabinet positions, including
@@ -300,6 +316,8 @@ const Home = ({ data, blog, roadmap, values }) => {
                                                     rvices,
                                                     minister of education, minister of defense, and finally prime minister in 2021, when he formed
                                                     a broad coalition and led the most diverse government in Israel’s history.
+                                                    </p>
+                                                    <p>
                                                     And throughout his political service, he looked to the Technion for leadership
                                                     and
                                                     partnership in many initiatives.
@@ -309,10 +327,12 @@ const Home = ({ data, blog, roadmap, values }) => {
                                                     Israel’s success and national security,” Mr. Bennett said.
                                                     The former prime minister lauded the Technion’s commitment to exc
                                                     ellence in education.
+                                                    
                                                     When he was minister of education and saw the steady decline in advanced high school
                                                     mathematics as a national crisis, he sought help from the Technion
+</p>
 
-                                                </p>
+                                                
                                             </div>
 
 
@@ -493,22 +513,50 @@ const Home = ({ data, blog, roadmap, values }) => {
                     </div>
                 </div>
             </section>
+            <section className="content_block">
+                <div className="container-fluid">
+                    <div className="content_block_inner">
+                        <div className="heading">
+                            <h6>REIMAGINING THE NEXT 100 YEARS</h6>
+                            <h2>
+                             
+                            Global Centennial
+                                Campaign for the Technion
+                                 
+                                </h2>
+                            <a href="https://ats.org/centennial/" target='_blank' className="btn btn-secondary">Learn More</a>
+                        </div>
+                        <div className="content_wrapper">
+                            <div className="qoute">
+                                <h4>
+                                    The Technion-Israel Institute of Technology has played a crucial role in the
+                                    establishment and vitality of Israel and in improving the lives of people worldwide
+                                    since opening its doors in 1924. And no other institution holds more promise for
+                                    Israel’s future.
+                                </h4>
+                            </div>
+                            <p>
+                                The Technion is preparing the leaders, scientists, and entrepreneurs who are reimagining
+                                the future of Israel and working to find solutions to challenging global problems. At
+                                this historic centennial moment, you have an extraordinary opportunity to partner with
+                                us in shaping the University’s second century.
+                            </p>
+                            <a href="#" className="btn btn-ghost">EXPLORE KEYSTONE OPPORTUNITIES </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
             <section className="blog_posts">
                 <div className="container-fluid">
                     <div className="blog_inner">
                         <div className="heading">
-                            <h2>
+                            <h1 style={{color:"#000"}}>
                              
                                 Reimagining the Next 100 Years
                                  
-                            </h2>
+                            </h1>
                             <br />
-                            <p>Over the past 100 years, fantastic leaps in the advancement of science and technology have
-                                revolutionized the world. The automobile replaced the horse and buggy; penicillin saved
-                                hundreds of millions of lives;
-                                and the invention of the computer, the World Wide Web, and
-                                digital communications and devices impacted our lives in ways our grandparents couldn’t
-                                have imagined. What will the next 100 years bring?</p>
+                            <p>Over the past 100 years, fantastic leaps in science and technology have revolutionized the world. What will the next 100 years bring? We asked four leading Technion scientists to share their visions for the big scientific advances that will change the ways we live.</p>
                             <p>
                                 Imagine advancements in biotech that enable personalized t
                                 reatments and cures for
@@ -567,39 +615,7 @@ const Home = ({ data, blog, roadmap, values }) => {
             </section>
 
 
-            <section className="content_block">
-                <div className="container-fluid">
-                    <div className="content_block_inner">
-                        <div className="heading">
-                            <h6>REIMAGINING THE NEXT 100 YEARS</h6>
-                            <h2>
-                             
-                            Global Centennial
-                                Campaign for the Technion
-                                 
-                                </h2>
-                            <a href="https://ats.org/centennial/" target='_blank' className="btn btn-secondary">Learn More</a>
-                        </div>
-                        <div className="content_wrapper">
-                            <div className="qoute">
-                                <h4>
-                                    The Technion-Israel Institute of Technology has played a crucial role in the
-                                    establishment and vitality of Israel and in improving the lives of people worldwide
-                                    since opening its doors in 1924. And no other institution holds more promise for
-                                    Israel’s future.
-                                </h4>
-                            </div>
-                            <p>
-                                The Technion is preparing the leaders, scientists, and entrepreneurs who are reimagining
-                                the future of Israel and working to find solutions to challenging global problems. At
-                                this historic centennial moment, you have an extraordinary opportunity to partner with
-                                us in shaping the University’s second century.
-                            </p>
-                            <a href="#" className="btn btn-ghost">EXPLORE KEYSTONE OPPORTUNITIES </a>
-                        </div>
-                    </div>
-                </div>
-            </section>
+            
             <section className="message">
                 <div className="container-fluid">
                     <div className="message_inner">
@@ -715,17 +731,17 @@ const Home = ({ data, blog, roadmap, values }) => {
                                         <div className="content">
                                             {parse(`${res.quote}`)}
                                             <div>
-                                                <p>
+                                                
 
                                                     <br /><br />
-                                                    <b>{res.name}</b><br />
+                                                    <b>{Capitalize(res.name)}<br /></b>
                                                     {res.designation}<br /><br />
                                                     <button onClick={() => {
                                                         setBlogModalData(res)
                                                     }} className='btn btn-accent'
                                                         type="button" data-bs-toggle="modal" data-bs-target="#blogModal"
                                                     >Read More </button>
-                                                </p></div>
+                                                </div>
 
                                         </div>
                                     </div>
