@@ -12,7 +12,6 @@ const NextYears = ({ blog }) => {
 
     const [blogModalData, setBlogModalData] = useState({})
     const blogData = blog.slice(0, 4)
-
     return (
         <>
 
@@ -189,9 +188,9 @@ const NextYears = ({ blog }) => {
 
                         <div className="hero_inner">
                             <div>
-                                <h1>
+                                <h1 style={{textTransform:'none'}}>
                                  
-                                    Reimagining The Next 100 Years
+                                    Reimagining the Next 100 Years
                                      
                                 </h1>
 
@@ -217,8 +216,7 @@ const NextYears = ({ blog }) => {
                                 digital communications and devices impacted our lives in ways our grandparents couldn’t
                                 have imagined. What will the next 100 years bring?</p>
                             <p>
-                                Imagine advancements in biotech that enable personalized t
-                                reatments and cures for
+                                Imagine advancements in biotech that enable personalized treatments and cures for
                                 diseases. Could nanorobots deliver drugs directly to the site of disease or heal injuries? What
                                 about being able to detect and even prevent disease before it manifests? Will food be sourced
                                 from animals but not come from them? Will

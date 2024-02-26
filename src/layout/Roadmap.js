@@ -88,12 +88,12 @@ const Roadmap = ({ roadmap, roadmapPage }) => {
             <div className="container-fluid">
                 <div className="roadmap_inner">
                     <div className="heading">
-                        <h6>
+                        {/* <h6>
                             American Technion Society
-                        </h6>
+                        </h6> */}
                         <h2>
 
-                            100 Years Of Innovation
+                            100 Years of Innovation
 
                         </h2>
                     </div>

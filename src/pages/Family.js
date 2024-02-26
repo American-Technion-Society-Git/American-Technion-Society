@@ -325,8 +325,7 @@ const Family = ({ data }) => {
                                          
                                     </h1>
                                     <p>
-                                    Join us in commemorating our 100th anniversary by becoming a part of the Technion community and capturing the essence of your favorite campus memories! Share your cherished moments with our global community.
-                                    </p>
+                                    You’re a part of the Technion story. Share your cherished moments with our global community.</p>
                                 </div>
                             </div>
                         </div>
@@ -341,24 +340,18 @@ const Family = ({ data }) => {
                             <div className='community_content'>
                             <div>
                                 <h1>
-                                 Connecting a Global Community </h1>
+                                Connecting Alumni to a Global Community </h1>
                                 <br />
                                 <p>
-                                    Technion graduates are making incredible, life-changing contributions to the world every single day. As high-tech startup founders, innovative scientific researchers, and leaders of companies in a variety of fields, the Technion alumni community is diverse, accomplished, and impressive. We’re proud that you are a part of it.
-                                    <br /><br />
-                                    The American Technion Society is committed to helping you stay connected with your fellow alumni and your alma mater, here in the United States and around the globe.
-                                    <br /><br />
-                                    Whether you read up on what’s happening at the Technion or make a donation to help current and future students, you’re helping to elevate the Technion’s — and Israel’s — status as a global force for good.
-                                    <br /><br />
+                                Technion graduates make incredible, life-changing contributions to the world every single day.
                                 </p>
-                                <h1>Connect with us,</h1>
+                                <p>We’re proud that you are part of our alumni community. Join us for fascinating talks, hands-on workshops, online lectures, networking opportunities in the U.S., and campus visits and class reunions in Israel. 
+                                </p>
                                 <div className='btn-container'>
-                                    <a className='btn btn-primary' href='https://www.facebook.com/americantechnionsociety/' target='_blank'>
-                                        Facebook
+                                    <a className='btn btn-primary' href='https://secure.ats.org/page/59616/data/1' target='_blank'>
+                                    Connect with us 
                                     </a>
-                                    <a className='btn btn-primary' href='https://www.instagram.com/americantechnionsociety/' target='_blank'>
-                                        Instagram
-                                    </a>
+                                   
                                 </div>
                             </div>
                             </div>
@@ -471,7 +464,7 @@ const Family = ({ data }) => {
                             }
                         </Slider>
                     </section>
-
+{/* 
                     <section className="content_block support_technion">
                         <div className="container-fluid">
                             <div className="content_block_inner">
@@ -497,7 +490,7 @@ const Family = ({ data }) => {
                                 </div>
                             </div>
                         </div>
-                    </section>
+                    </section> */}
 
                     <Footer />
                 </div>

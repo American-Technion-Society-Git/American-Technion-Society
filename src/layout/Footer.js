@@ -21,7 +21,7 @@ const Footer = () => {
                                         New York, NY 10022</p>
                                     <ul className="footer_links">
                                         <li>
-                                            <a href="tel:212 407 6300">212 407 6300</a>
+                                            <a href="tel:212.407.6300" style={{borderBottom:'none !important'}}>212.407.6300</a>
                                         </li>
                                         <li>
                                             <a href="mailto:info@ats.org">info@ats.org</a>
