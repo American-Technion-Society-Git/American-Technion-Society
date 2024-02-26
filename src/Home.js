@@ -489,7 +489,7 @@ const Home = ({ data, blog, roadmap, values }) => {
                                     the other way around, who knows what would have happened. The Technion created the
                                     State of Israel and deserves the credit for this.”
                                 </h4>
-                                <p className="blocktext" style={{fontWeight:"600"}}>
+                                <p>
                                     Prime Minister and President of Israel Shimon Peres
                                 </p>
                             </div>
@@ -652,7 +652,7 @@ const Home = ({ data, blog, roadmap, values }) => {
                                  
                             </h2>
                             <p className='mw-50'>
-                                Join us in commemorating our 100th anniversary by becoming a part of the Technion community and capturing the essence of your favorite campus memories! Share your cherished moments with our global community
+                            What’s your Technion story? We want to hear it! Share your favorite Technion memory with our community.
                             </p>
                         </div>
                         <div className="stories_grid">

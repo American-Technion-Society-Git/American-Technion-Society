@@ -314,50 +314,6 @@ const Family = ({ data }) => {
                     </div>
                 </div>
                     </nav>
-                    <section className="hero" style={{ backgroundImage: `url(${background})`,marginTop:"72px"}}>
-                        <div className="container-fluid">
-
-                            <div className="hero_inner">
-                                <div>
-                                    <h1>
-                                     
-                                        Technion Stories
-                                         
-                                    </h1>
-                                    <p>
-                                    You’re a part of the Technion story. Share your cherished moments with our global community.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                    </section>
-
-                    <section className='connecting_community'>
-                        <div className='connecting_inner'>
-                            <div className='community_img' style={{ margin: "3rem 0" }}>
-                                <img src={connecting} width={"101%"} height={'100%'} style={{ position: "relative", zIndex: "-1" }} />
-                            </div>
-                            <div className='community_content'>
-                            <div>
-                                <h1>
-                                Connecting Alumni to a Global Community </h1>
-                                <br />
-                                <p>
-                                Technion graduates make incredible, life-changing contributions to the world every single day.
-                                </p>
-                                <p>We’re proud that you are part of our alumni community. Join us for fascinating talks, hands-on workshops, online lectures, networking opportunities in the U.S., and campus visits and class reunions in Israel. 
-                                </p>
-                                <div className='btn-container'>
-                                    <a className='btn btn-primary' href='https://secure.ats.org/page/59616/data/1' target='_blank'>
-                                    Connect with us 
-                                    </a>
-                                   
-                                </div>
-                            </div>
-                            </div>
-                        </div>
-                    </section>
-
                     <section className="stories">
                         <div className="container-fluid">
                             <div className="stories_inner">
@@ -431,6 +387,51 @@ const Family = ({ data }) => {
                             </div>
                         </div>
                     </section>
+                    <section className="hero" style={{ backgroundImage: `url(${background})`,marginTop:"72px"}}>
+                        <div className="container-fluid">
+
+                            <div className="hero_inner">
+                                <div>
+                                    <h1>
+                                     
+                                        Technion Stories
+                                         
+                                    </h1>
+                                    <p>
+                                    You’re a part of the Technion story. Share your cherished moments with our global community.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </section>
+
+                    <section className='connecting_community'>
+                        <div className='connecting_inner'>
+                            <div className='community_img' style={{ margin: "3rem 0" }}>
+                                <img src={connecting} width={"101%"} height={'100%'} style={{ position: "relative", zIndex: "-1" }} />
+                            </div>
+                            <div className='community_content'>
+                            <div>
+                                <h1>
+                                Connecting Alumni to a Global Community </h1>
+                                <br />
+                                <p>
+                                Technion graduates make incredible, life-changing contributions to the world every single day.
+                                </p>
+                                <p>We’re proud that you are part of our alumni community. Join us for fascinating talks, hands-on workshops, online lectures, networking opportunities in the U.S., and campus visits and class reunions in Israel. 
+                                </p>
+                                <div className='btn-container'>
+                                    <a className='btn btn-primary' href='https://secure.ats.org/page/59616/data/1' target='_blank'>
+                                    Connect with us 
+                                    </a>
+                                   
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    
                     <section className="testimonials">
                         <Slider {...settings}>
                             {
