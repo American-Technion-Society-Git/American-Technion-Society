@@ -87,9 +87,9 @@ const About = ({ blog, roadmap }) => {
 
                                 </h1>
                                 <p>
-                                    It’s fortunate that the Technion existed before the State of Israel. If it had been
-                                    the other way around, who knows what would have happened. The Technion created the
-                                    State of Israel and deserves the credit for this.
+                                “The Technion has helped visualize, plan, and implement Israel’s growth. It has aided in transforming a tiny country into a great center of science and research, sharing its advances with others.” 
+Former Prime Minister Of Israel Golda Meir
+
                                 </p>
                             </div>
                         </div>
