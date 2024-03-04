@@ -484,7 +484,7 @@ h4 {
 }
 
 .usps {
-    transform: translateY(-2rem);
+    transform: translateY(-6rem);
     z-index: 10;
     position: relative;
 
@@ -666,7 +666,6 @@ h4 {
 
         .content_wrapper {
             background: $white;
-            padding: 3rem;
             color: $dark;
             display: flex;
             flex-direction: column;
@@ -1011,7 +1010,7 @@ h4 {
 }
 
 .footer {
-    background: #084D9A;
+    background: #002147;
     padding: 4rem 0rem;
 
     .footer_inner {
@@ -1670,8 +1669,8 @@ h6 {
 a {
     color: #002147 !important;
     font-weight: 900 !important;
-    border-bottom: 3px solid !important;
-    border-color: #aa9767 !important;
+    // border-bottom: 3px solid !important;
+    // border-color: #aa9767 !important;
     text-transform: none !important;
 }
 

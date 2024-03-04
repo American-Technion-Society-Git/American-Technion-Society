@@ -21,6 +21,7 @@
     "react-ui-scrollspy": "^2.3.0",
     "sass": "^1.69.5",
     "slick-carousel": "^1.8.1",
+    "swiper": "^11.0.7",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -46,5 +47,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.1"
   }
 }
