@@ -446,7 +446,7 @@ const Family = ({ data }) => {
             
 
             <div className="flex flex-col md:flex-row justify-center md:justify-between mt-16">
-              <div className="text-[#002147] w-[94%] md:w-[65%] mx-auto md:mx-0">
+              <div className="text-[#002147] w-[94%] md:w-[100%] mx-auto md:mx-0">
                 <div className="text-[41.88px]">Share Your Story</div>
                 <div className="mt-2">
                   Join us in commemorating our 100th anniversary by becoming a
@@ -455,190 +455,237 @@ const Family = ({ data }) => {
                   cherished moments with our global community.
                 </div>
               </div>
-              <div className="mx-auto md:w-[25%]">
-                <div
-                  // className="drop_box"
-                  className={`drop_box ${
-                    isDragOver ? "drag-over" : ""
-                  } border-2 border-dotted bg-[#F9F9F9] px-4`}
-                  // onDragOver={(e) => handleDragOver(e)}
-                  // onDrop={(e) => handleDrop(e)}
-                  // onClick={() => handleDropClick()}
-                  onDragOver={handleDragOver}
-                  onDrop={handleDrop}
-                  onClick={handleDropClick}
-                >
-                  <div id="drop-area">
-                    <form className="my-form">
-                      {fileLoader ? (
-                        <div>
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 200 200"
-                            className=""
-                          >
-                            <circle
-                              fill="#114A99"
-                              stroke="#114A99"
-                              strokeWidth="15"
-                              r="15"
-                              cx="40"
-                              cy="65"
-                            >
-                              <animate
-                                attributeName="cy"
-                                calcMode="spline"
-                                dur="2"
-                                values="65;135;65;"
-                                keySplines=".5 0 .5 1;.5 0 .5 1"
-                                repeatCount="indefinite"
-                                begin="-.4"
-                              ></animate>
-                            </circle>
-                            <circle
-                              fill="#114A99"
-                              stroke="#114A99"
-                              strokeWidth="15"
-                              r="15"
-                              cx="100"
-                              cy="65"
-                            >
-                              <animate
-                                attributeName="cy"
-                                calcMode="spline"
-                                dur="2"
-                                values="65;135;65;"
-                                keySplines=".5 0 .5 1;.5 0 .5 1"
-                                repeatCount="indefinite"
-                                begin="-.2"
-                              ></animate>
-                            </circle>
-                            <circle
-                              fill="#114A99"
-                              stroke="#114A99"
-                              strokeWidth="15"
-                              r="15"
-                              cx="160"
-                              cy="65"
-                            >
-                              <animate
-                                attributeName="cy"
-                                calcMode="spline"
-                                dur="2"
-                                values="65;135;65;"
-                                keySplines=".5 0 .5 1;.5 0 .5 1"
-                                repeatCount="indefinite"
-                                begin="0"
-                              ></animate>
-                            </circle>
-                          </svg>
-                          Loading...
+            </div>
+
+              <div class="story_main">
+                <div class="story_container">
+                  <div class="card">
+                    <div class="card-image">
+                      <a data-fancybox="gallery" href="https://lipsum.app/id/60/1600x1200">
+                        <img class="rounded" src="https://lipsum.app/id/60/200x150" />
+                      </a>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="card-image">
+                      <a data-fancybox="gallery" href="https://lipsum.app/id/61/1600x1200">
+                        <img class="rounded" src="https://lipsum.app/id/61/200x150" />
+                      </a>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="card-image">
+                      <a data-fancybox="gallery" href="https://lipsum.app/id/62/1600x1200">
+                        <img class="rounded" src="https://lipsum.app/id/62/200x150" />
+                      </a>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="card-image">
+                      <a data-fancybox="gallery" href="https://lipsum.app/id/63/1600x1200">
+                        <img class="rounded" src="https://lipsum.app/id/63/200x150" />
+                      </a>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="card-image">
+                      <a data-fancybox="gallery" href="https://lipsum.app/id/64/1600x1200">
+                        <img class="rounded" src="https://lipsum.app/id/64/200x150" />
+                      </a>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="card-image">
+                      <a data-fancybox="gallery" href="https://lipsum.app/id/65/1600x1200">
+                        <img class="rounded" src="https://lipsum.app/id/65/200x150" />
+                      </a>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="card-image">
+                      <a data-fancybox="gallery" href="https://lipsum.app/id/66/1600x1200">
+                        <img class="rounded" src="https://lipsum.app/id/66/200x150" />
+                      </a>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="card-image">
+                      <a data-fancybox="gallery" href="https://lipsum.app/id/67/1600x1200">
+                        <img class="rounded" src="https://lipsum.app/id/67/200x150" />
+                      </a>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="card-image">
+                      <a data-fancybox="gallery" href="https://lipsum.app/id/68/1600x1200">
+                        <img class="rounded" src="https://lipsum.app/id/68/200x150" />
+                      </a>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="card-image">
+                      <a data-fancybox="gallery" href="https://lipsum.app/id/69/1600x1200">
+                        <img class="rounded" src="https://lipsum.app/id/69/200x150" />
+                      </a>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="card-image">
+                      <a data-fancybox="gallery" href="https://lipsum.app/id/70/1600x1200">
+                        <img class="rounded" src="https://lipsum.app/id/70/200x150" />
+                      </a>
+                    </div>
+                  </div>
+                  <div class="card drop_img">
+                    <div class="card-image">
+                      <div
+                        // className="drop_box"
+                        className={`drop_box ${
+                          isDragOver ? "drag-over" : ""
+                        } border-2 border-dotted bg-[#F9F9F9]`}
+                        // onDragOver={(e) => handleDragOver(e)}
+                        // onDrop={(e) => handleDrop(e)}
+                        // onClick={() => handleDropClick()}
+                        onDragOver={handleDragOver}
+                        onDrop={handleDrop}
+                        onClick={handleDropClick}
+                      >
+                        <div id="drop-area">
+                          <form className="my-form">
+                            {fileLoader ? (
+                              <div>
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  viewBox="0 0 200 200"
+                                  className=""
+                                >
+                                  <circle
+                                    fill="#114A99"
+                                    stroke="#114A99"
+                                    strokeWidth="15"
+                                    r="15"
+                                    cx="40"
+                                    cy="65"
+                                  >
+                                    <animate
+                                      attributeName="cy"
+                                      calcMode="spline"
+                                      dur="2"
+                                      values="65;135;65;"
+                                      keySplines=".5 0 .5 1;.5 0 .5 1"
+                                      repeatCount="indefinite"
+                                      begin="-.4"
+                                    ></animate>
+                                  </circle>
+                                  <circle
+                                    fill="#114A99"
+                                    stroke="#114A99"
+                                    strokeWidth="15"
+                                    r="15"
+                                    cx="100"
+                                    cy="65"
+                                  >
+                                    <animate
+                                      attributeName="cy"
+                                      calcMode="spline"
+                                      dur="2"
+                                      values="65;135;65;"
+                                      keySplines=".5 0 .5 1;.5 0 .5 1"
+                                      repeatCount="indefinite"
+                                      begin="-.2"
+                                    ></animate>
+                                  </circle>
+                                  <circle
+                                    fill="#114A99"
+                                    stroke="#114A99"
+                                    strokeWidth="15"
+                                    r="15"
+                                    cx="160"
+                                    cy="65"
+                                  >
+                                    <animate
+                                      attributeName="cy"
+                                      calcMode="spline"
+                                      dur="2"
+                                      values="65;135;65;"
+                                      keySplines=".5 0 .5 1;.5 0 .5 1"
+                                      repeatCount="indefinite"
+                                      begin="0"
+                                    ></animate>
+                                  </circle>
+                                </svg>
+                                Loading...
+                              </div>
+                            ) : (
+                              <div style={{ paddingTop: "35px" }} >
+                                <svg
+                                  width="78"
+                                  height="66"
+                                  viewBox="0 0 78 66"
+                                  fill="none"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                >
+                                  <g clipPath="url(#clip0_30_808)">
+                                    <path
+                                      d="M22 15.1667C22 16.9722 21.3583 18.5069 20.075 19.7708C18.7917 21.0347 17.2333 21.6667 15.4 21.6667C13.5667 21.6667 12.0083 21.0347 10.725 19.7708C9.44167 18.5069 8.8 16.9722 8.8 15.1667C8.8 13.3611 9.44167 11.8264 10.725 10.5625C12.0083 9.29861 13.5667 8.66667 15.4 8.66667C17.2333 8.66667 18.7917 9.29861 20.075 10.5625C21.3583 11.8264 22 13.3611 22 15.1667ZM57.2 28.1667V43.3333H8.8V36.8333L19.8 26L25.3 31.4167L42.9 14.0833L57.2 28.1667ZM60.5 4.33333H5.5C5.20208 4.33333 4.94427 4.44054 4.72656 4.65495C4.50885 4.86936 4.4 5.12326 4.4 5.41667V46.5833C4.4 46.8767 4.50885 47.1306 4.72656 47.3451C4.94427 47.5595 5.20208 47.6667 5.5 47.6667H60.5C60.7979 47.6667 61.0557 47.5595 61.2734 47.3451C61.4911 47.1306 61.6 46.8767 61.6 46.5833V5.41667C61.6 5.12326 61.4911 4.86936 61.2734 4.65495C61.0557 4.44054 60.7979 4.33333 60.5 4.33333ZM66 5.41667V46.5833C66 48.0729 65.4615 49.3481 64.3844 50.4089C63.3073 51.4696 62.0125 52 60.5 52H5.5C3.9875 52 2.69271 51.4696 1.61563 50.4089C0.538542 49.3481 0 48.0729 0 46.5833V5.41667C0 3.92708 0.538542 2.65191 1.61563 1.59115C2.69271 0.530382 3.9875 0 5.5 0H60.5C62.0125 0 63.3073 0.530382 64.3844 1.59115C65.4615 2.65191 66 3.92708 66 5.41667Z"
+                                      fill="#2F61A6"
+                                      fillOpacity="0.2"
+                                    />
+                                  </g>
+                                  <rect
+                                    x="41"
+                                    y="29.5"
+                                    width="35"
+                                    height="35"
+                                    rx="17.5"
+                                    fill="#114A99"
+                                  />
+                                  <rect
+                                    x="41"
+                                    y="29.5"
+                                    width="35"
+                                    height="35"
+                                    rx="17.5"
+                                    stroke="white"
+                                    strokeWidth="3"
+                                  />
+                                  <path
+                                    fillRule="evenodd"
+                                    clipRule="evenodd"
+                                    d="M57.7929 41.2929C58.1834 40.9024 58.8166 40.9024 59.2071 41.2929L64.2071 46.2929C64.5976 46.6834 64.5976 47.3166 64.2071 47.7071C63.8166 48.0976 63.1834 48.0976 62.7929 47.7071L59.5 44.4142V52C59.5 52.5523 59.0523 53 58.5 53C57.9477 53 57.5 52.5523 57.5 52V44.4142L54.2071 47.7071C53.8166 48.0976 53.1834 48.0976 52.7929 47.7071C52.4024 47.3166 52.4024 46.6834 52.7929 46.2929L57.7929 41.2929Z"
+                                    fill="white"
+                                  />
+                                  <defs>
+                                    <clipPath id="clip0_30_808">
+                                      <rect width="66" height="52" fill="white" />
+                                    </clipPath>
+                                  </defs>
+                                </svg>
+                                <h4 className="text-left">Drag & Drop here</h4>
+                                <p className="text-left">to upload your photo</p>
+                                <input
+                                  style={{ visibility: "collapse" }}
+                                  type="file"
+                                  id="fileElem"
+                                  multiple
+                                  accept="image/*"
+                                  className="form-control"
+                                  onChange={(e) => {
+                                    setFile(e.target.files);
+                                    setImgUpload(true);
+                                  }}
+                                />
+                              </div>
+                            )}
+                          </form>
                         </div>
-                      ) : (
-                        <div style={{ paddingTop: "35px" }} >
-                          <svg
-                            width="78"
-                            height="66"
-                            viewBox="0 0 78 66"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <g clipPath="url(#clip0_30_808)">
-                              <path
-                                d="M22 15.1667C22 16.9722 21.3583 18.5069 20.075 19.7708C18.7917 21.0347 17.2333 21.6667 15.4 21.6667C13.5667 21.6667 12.0083 21.0347 10.725 19.7708C9.44167 18.5069 8.8 16.9722 8.8 15.1667C8.8 13.3611 9.44167 11.8264 10.725 10.5625C12.0083 9.29861 13.5667 8.66667 15.4 8.66667C17.2333 8.66667 18.7917 9.29861 20.075 10.5625C21.3583 11.8264 22 13.3611 22 15.1667ZM57.2 28.1667V43.3333H8.8V36.8333L19.8 26L25.3 31.4167L42.9 14.0833L57.2 28.1667ZM60.5 4.33333H5.5C5.20208 4.33333 4.94427 4.44054 4.72656 4.65495C4.50885 4.86936 4.4 5.12326 4.4 5.41667V46.5833C4.4 46.8767 4.50885 47.1306 4.72656 47.3451C4.94427 47.5595 5.20208 47.6667 5.5 47.6667H60.5C60.7979 47.6667 61.0557 47.5595 61.2734 47.3451C61.4911 47.1306 61.6 46.8767 61.6 46.5833V5.41667C61.6 5.12326 61.4911 4.86936 61.2734 4.65495C61.0557 4.44054 60.7979 4.33333 60.5 4.33333ZM66 5.41667V46.5833C66 48.0729 65.4615 49.3481 64.3844 50.4089C63.3073 51.4696 62.0125 52 60.5 52H5.5C3.9875 52 2.69271 51.4696 1.61563 50.4089C0.538542 49.3481 0 48.0729 0 46.5833V5.41667C0 3.92708 0.538542 2.65191 1.61563 1.59115C2.69271 0.530382 3.9875 0 5.5 0H60.5C62.0125 0 63.3073 0.530382 64.3844 1.59115C65.4615 2.65191 66 3.92708 66 5.41667Z"
-                                fill="#2F61A6"
-                                fillOpacity="0.2"
-                              />
-                            </g>
-                            <rect
-                              x="41"
-                              y="29.5"
-                              width="35"
-                              height="35"
-                              rx="17.5"
-                              fill="#114A99"
-                            />
-                            <rect
-                              x="41"
-                              y="29.5"
-                              width="35"
-                              height="35"
-                              rx="17.5"
-                              stroke="white"
-                              strokeWidth="3"
-                            />
-                            <path
-                              fillRule="evenodd"
-                              clipRule="evenodd"
-                              d="M57.7929 41.2929C58.1834 40.9024 58.8166 40.9024 59.2071 41.2929L64.2071 46.2929C64.5976 46.6834 64.5976 47.3166 64.2071 47.7071C63.8166 48.0976 63.1834 48.0976 62.7929 47.7071L59.5 44.4142V52C59.5 52.5523 59.0523 53 58.5 53C57.9477 53 57.5 52.5523 57.5 52V44.4142L54.2071 47.7071C53.8166 48.0976 53.1834 48.0976 52.7929 47.7071C52.4024 47.3166 52.4024 46.6834 52.7929 46.2929L57.7929 41.2929Z"
-                              fill="white"
-                            />
-                            <defs>
-                              <clipPath id="clip0_30_808">
-                                <rect width="66" height="52" fill="white" />
-                              </clipPath>
-                            </defs>
-                          </svg>
-                          <h4 className="text-left">Drag & Drop here</h4>
-                          <p className="text-left">to upload your photo</p>
-                          <input
-                            style={{ visibility: "collapse" }}
-                            type="file"
-                            id="fileElem"
-                            multiple
-                            accept="image/*"
-                            className="form-control"
-                            onChange={(e) => {
-                              setFile(e.target.files);
-                              setImgUpload(true);
-                            }}
-                          />
-                        </div>
-                      )}
-                    </form>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
+              
             </div>
-
-            <div class="grid grid-cols-3 gap-4 max-w-xl mx-auto p-10">
-      <a data-fancybox="gallery" href="https://lipsum.app/id/60/1600x1200">
-        <img class="rounded" src="https://lipsum.app/id/60/200x150" />
-      </a>
-      <a data-fancybox="gallery" href="https://lipsum.app/id/61/1600x1200">
-        <img class="rounded" src="https://lipsum.app/id/61/200x150" />
-      </a>
-      <a data-fancybox="gallery" href="https://lipsum.app/id/62/1600x1200">
-        <img class="rounded" src="https://lipsum.app/id/62/200x150" />
-      </a>
-      <a data-fancybox="gallery" href="https://lipsum.app/id/63/1600x1200">
-        <img class="rounded" src="https://lipsum.app/id/63/200x150" />
-      </a>
-      <a data-fancybox="gallery" href="https://lipsum.app/id/64/1600x1200">
-        <img class="rounded" src="https://lipsum.app/id/64/200x150" />
-      </a>
-      <a data-fancybox="gallery" href="https://lipsum.app/id/65/1600x1200">
-        <img class="rounded" src="https://lipsum.app/id/65/200x150" />
-      </a>
-      <a data-fancybox="gallery" href="https://lipsum.app/id/66/1600x1200">
-        <img class="rounded" src="https://lipsum.app/id/66/200x150" />
-      </a>
-      <a data-fancybox="gallery" href="https://lipsum.app/id/67/1600x1200">
-        <img class="rounded" src="https://lipsum.app/id/67/200x150" />
-      </a>
-      <a data-fancybox="gallery" href="https://lipsum.app/id/68/1600x1200">
-        <img class="rounded" src="https://lipsum.app/id/68/200x150" />
-      </a>
-      <a data-fancybox="gallery" href="https://lipsum.app/id/69/1600x1200">
-        <img class="rounded" src="https://lipsum.app/id/69/200x150" />
-      </a>
-      <a data-fancybox="gallery" href="https://lipsum.app/id/70/1600x1200">
-        <img class="rounded" src="https://lipsum.app/id/70/200x150" />
-      </a>
-      <a data-fancybox="gallery" href="https://lipsum.app/id/71/1600x1200">
-        <img class="rounded" src="https://lipsum.app/id/71/200x150" />
-      </a>
-    </div>
           </div>
 
           <div className="bg-[#F5F5F5] py-12">
@@ -1041,7 +1088,7 @@ const Family = ({ data }) => {
 
           <Footer />
         </div>
-      </div>
+      
     </React.Fragment>
   );
 };
