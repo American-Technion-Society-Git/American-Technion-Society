@@ -55,7 +55,27 @@ $white: #FFFFFF;
 
 .App {
     width: 100%;
-    overflow: hidden;
+    // overflow: hidden;
+}
+
+.app.up {
+    position: sticky;
+    bottom: 4;
+    right: 4;
+}
+
+.header{
+    position: sticky;
+    top: 0;
+}
+
+.scrollbar-hidden::-webkit-scrollbar {
+    display: none;
+  }
+  
+.scrollbar-hidden {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
 }
 
 .container-fluid {
@@ -66,6 +86,10 @@ $white: #FFFFFF;
 .mw-50 {
     max-width: 50rem;
     margin: 0 auto;
+}
+
+.modal {
+    padding: 0 128px
 }
 
 .modal-dialog {
@@ -296,11 +320,11 @@ body {
     }
 
     &.btn-accent {
-        background: $secondary;
+        background: #094D9A;
         color: $white;
 
         &:hover {
-            background: $primary;
+            background: #002147;
             color: $white;
         }
     }
@@ -358,7 +382,7 @@ h1 {
     position: relative;
     z-index: 1;
     overflow: hidden;
-    height: 40rem;
+    height: 65vh;
 
     .navbar {
         position: absolute;
@@ -491,13 +515,13 @@ h4 {
     .usps_inner {
         background: $dark;
         color: $white;
-        padding: 3.7rem 6.25rem;
+        padding: 3.7rem 6.25rem 3.2rem 6.25rem;
 
         .heading {
             text-align: center;
             max-width: 44rem;
             margin: 0 auto;
-            margin-bottom: 5rem;
+            margin-bottom: 3rem;
         }
 
     }
@@ -547,7 +571,7 @@ h4 {
         img {
             object-fit: cover;
             width: 100%;
-            height: 32rem;
+            height: 18rem;
             overflow: hidden;
         }
     }
@@ -577,7 +601,7 @@ h4 {
             padding-bottom: 0.5rem;
 
             display: -webkit-box;
-            -webkit-line-clamp: 5;
+            -webkit-line-clamp: 3;
             -webkit-box-orient: vertical;
             overflow: hidden;
             text-overflow: ellipsis;
@@ -594,6 +618,21 @@ h4 {
         img {
             margin-left: 1rem;
         }
+    }
+}
+@media (max-width: 631px) {
+    .hero { 
+        height: 100%;
+    }
+    .hero video{
+        width: 100%;
+        object-fit: contain;
+        object-position: top;
+        margin-top: 0;
+        height: 100%;
+    }
+    .usps {
+        transform: translateY(0rem);
     }
 }
 
@@ -621,7 +660,7 @@ h4 {
 }
 
 .content_block {
-    background: url('./assets/contentbox_bg.png');
+    background: url('./assets/GlobalCenttennial.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -666,7 +705,6 @@ h4 {
 
         .content_wrapper {
             background: $white;
-            padding: 3rem;
             color: $dark;
             display: flex;
             flex-direction: column;
@@ -681,13 +719,13 @@ h4 {
     padding: 7rem 0rem;
 
     .message_inner {
-        display: grid;
+        // display: grid;
         grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 2rem;
         align-items: center;
 
         .image_wrapper {
-            background: url('./assets/naftali_bg.png');
+            // background: url('./assets/naftali_bg.png');
             background-size: contain;
             background-repeat: no-repeat;
             background-position: center;
@@ -695,7 +733,7 @@ h4 {
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 40rem;
+            height: 20rem;
 
             .person_wrapper {
                 background: $primary;
@@ -747,6 +785,39 @@ h4 {
     z-index: 999999;
 }
 
+.arrow {
+    // width: 2.825rem;
+    // height: 2.825rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+    border: 1px solid rgba($color: $dark, $alpha: 0.2);
+    background: $white;
+    cursor: pointer;
+}
+
+.year {
+    border: 1px solid rgba($color: $dark, $alpha: 0.2);
+    background: $white;
+    width: 5rem;
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+
+    li {
+        margin: 0;
+        padding: 0;
+        display: none;
+
+        &.active-scroll-spy {
+            display: block;
+        }
+    }
+}
+
 .slider {
     height: 25rem;
     position: absolute;
@@ -769,8 +840,8 @@ h4 {
     }
 
     .arrow {
-        width: 2.125rem;
-        height: 2.125rem;
+        // width: 2.125rem;
+        // height: 2.125rem;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -1009,16 +1080,19 @@ h4 {
         }
     }
 }
-
+.copywrite {
+    font-family: "Neue Haas Grotesk Display", sans-serif;
+}
 .footer {
-    background: #084D9A;
-    padding: 4rem 0rem;
+    background: #002147;
+    padding: 6rem 0rem 2rem 0rem;
 
     .footer_inner {
         display: grid;
         grid-template-columns: repeat(3, minmax(0, 1fr));
         gap: 2rem;
         color: $white;
+        margin-bottom: 107px;
 
         .details {
             h6 {
@@ -1027,6 +1101,7 @@ h4 {
 
             img {
                 max-width: 14.5rem;
+                margin-bottom: 25px;
             }
 
             display: flex;
@@ -1037,6 +1112,11 @@ h4 {
                 border-bottom: none !important;
                 display: flex !important;
                 gap: 8px !important;
+                margin: 0 5px;
+                svg {
+                    width: 15px;
+                    height: 15px;
+                }
             }
         }
 
@@ -1087,26 +1167,37 @@ h4 {
 
 #blogModal{
     backdrop-filter: blur(5px);
-    .modal-dialog{
-        min-width: 100%;
-    margin: 0;
-    padding: 0;
-    clip-path: polygon(calc(100% - 70px) 0, 100% 0, 100% 100%, 0 100%, 0 14rem);
-    
+
+    @media (max-width: 631px) {
+        .modal-dialog{
+        width: 100%;
+        margin: 0;
+        }
     }
+    @media (min-width: 633px) {
+        .modal-dialog{
+        width: 100% ;
+        margin: 0;
+        max-width: 100%;
+    }}
     .modal-content{
+        width: 100%;
         border-radius: 0;
-        padding-top: 17rem;
+        padding-top: 5rem;
         .modal-header{
             border-bottom: none;
+            position: absolute;
+            top: 0;
+            right: 0;
             .btn-close{
                 position: absolute;
+                z-index: 50;
                 right: 0;
                 top: 0;
                 background: #4a4a4a;
                 color: #030202;
-                height: 60px;
-                width: 60px;
+                height: 40px;
+                width: 40px;
                 border-radius: 0;
                 margin: 0;
                 &:hover{
@@ -1240,9 +1331,9 @@ h4 {
     }
 
     #blogModal .modal-dialog{
-        clip-path: polygon(calc(100% - 72px) 0, 100% 0, 100% 100%, 0 100%, 0 12rem);
+        // clip-path: polygon(calc(100% - 72px) 0, 100% 0, 100% 100%, 0 100%, 0 12rem);
         .modal-content{
-            padding-top: 13rem;
+            padding-top: 5rem;
         }
     }
 
@@ -1306,9 +1397,9 @@ h4 {
     }
 
     #blogModal .modal-dialog{
-        clip-path: polygon(calc(100% - 72px) 0, 100% 0, 100% 100%, 0 100%, 0 10rem);
+        // clip-path: polygon(calc(100% - 72px) 0, 100% 0, 100% 100%, 0 100%, 0 10rem);
         .modal-content{
-            padding-top: 10rem;
+            padding-top: 5rem;
         }
     }
 
@@ -1500,7 +1591,7 @@ h4 {
 
         h4,
         p {
-            text-align: center !important;
+            text-align: center ;
         }
     }
 
@@ -1527,9 +1618,9 @@ h4 {
     }
 
     #blogModal .modal-dialog{
-        clip-path: polygon(calc(100% - 72px) 0, 100% 0, 100% 100%, 0 100%, 0 7rem);
+        // clip-path: polygon(calc(100% - 72px) 0, 100% 0, 100% 100%, 0 100%, 0 7rem);
         .modal-content{
-            padding-top: 6rem;
+            padding-top: 5rem;
         }
     }
 
@@ -1558,7 +1649,7 @@ h4 {
     }
 
     #blogModal .modal-dialog{
-        clip-path: polygon(calc(100% - 72px) 0, 100% 0, 100% 100%, 0 100%, 0 4rem);
+        // clip-path: polygon(calc(100% - 72px) 0, 100% 0, 100% 100%, 0 100%, 0 4rem);
     }
 
 }
@@ -1652,7 +1743,7 @@ h3 {
 }
 
 h4 {
-    font-size: 25px !important;
+    font-size: 25px ;
     font-weight: 450 !important;
 }
 
@@ -1662,16 +1753,16 @@ h5 {
 }
 
 h6 {
-    font-size: 13px !important;
-    font-weight: 400 !important;
+    font-size: 13px;
+    font-weight: 400;
     text-transform: uppercase !important;
 }
 
 a {
     color: #002147 !important;
-    font-weight: 900 !important;
-    border-bottom: 3px solid !important;
-    border-color: #aa9767 !important;
+    font-weight: 300 ;
+    // border-bottom: 3px solid !important;
+    // border-color: #aa9767 !important;
     text-transform: none !important;
 }
 
@@ -1679,9 +1770,8 @@ p {
     font-size: 19px !important;
     font-weight: auto;
     font-family: "'Neue Haas Grotesk Display Pro'", sans-serif !important;
-    line-height: 165% !important;
+    line-height: 165% ;
 }
-
 
 .navbar{
     position: absolute !important;
@@ -1697,11 +1787,27 @@ p {
 .footer .footer_inner p {
     border-bottom: none !important;
     max-width: 300px;
+    font-size: 15px !important;
+    line-height: 1.5;
+    color: #fff;
+}
+ul.footer_links li {
+    margin: 10px 0;
+}
+
+.footer .footer_inner ul.footer_links li a {
+    border-bottom: none;
+    display: inline-block;
+    text-decoration: underline;
 }
 
 .footer .footer_inner a {
     color: #fff !important;
-    border-bottom: 1px solid #fff !important;
+    border-bottom: 1px solid #fff;
+    font-weight: 100 !important;
+    font-family: "Neue Haas Grotesk Display", sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
     &:hover{
         transition: 1s ease;
         border-bottom: none !important;
@@ -1713,7 +1819,9 @@ p {
     width: fit-content;
     color: $white !important;
 }
-
+.modal {
+    padding: 0;
+}
 .modal .modal-body {
 
     input,
@@ -2065,9 +2173,17 @@ p {
     }
 }
 
-#exampleModal .modal-dialog{
-    max-width: none !important;
-    width: 100% !important;
+#exampleModal {
+    @media (max-width: 631px) {
+        .modal-dialog{
+        width: 100%;
+        margin: 0;
+        }
+    }
+    @media (min-width: 633px) {.modal-dialog{
+        width: 100% ;
+        margin: 0 auto;
+    }}
 }
 
 .modal-body .message .content {
@@ -2101,7 +2217,7 @@ p {
 
 
 .footer_inner p{
-    font-size: 16px !important;
+    font-size: 16px ;
 }
 
 .content_wrapper h4{
@@ -2111,12 +2227,13 @@ p {
 .hero video{
     width: 100%;
     object-fit: cover;
-    margin-top: -3rem;
-    height: 104%;
+    object-position: bottom;
+    margin-top: 0;
+    height: 100%;
 }
 
 .footer_inner .details h5{
-    font-size: 12px !important;
+    font-size: 12px ;
 }
 #navbar{
     background-color: #fff !important;
@@ -2135,3 +2252,14 @@ color: slategray !important;
     right: 15px;
     z-index: 2 !important;
   }
+
+.row{
+    .p{
+        line-height: 5rem !important;
+    }
+}
+
+
+.quote_txt {
+    font-size: 18px;
+}

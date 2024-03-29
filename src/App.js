@@ -13,8 +13,7 @@ import NextYears from './pages/NextYears';
 import Family from './pages/Family';
 import Stories from './pages/Stories';
 
-
-
+import { IoIosArrowUp } from "react-icons/io";
 
 function App() {
 
@@ -163,6 +162,7 @@ function App() {
         const dataUnsubscribe = onSnapshot(dataRef, (snapshot) => {
           dataList = snapshot.docs.map((doc) => doc.data());
           setYearsBlog(dataList);
+          console.log(dataList)
         });
 
         // Cleanup the listeners when the component unmounts
@@ -179,14 +179,31 @@ function App() {
 
   const roadmapData = roadmap.sort((a, b) => parseInt(a.year) - parseInt(b.year))
 
+  const [isScrolled, setIsScrolled] = useState(false);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+  console.log(blog)
 
   return (
     <div className="App">
-     
     {
      <Routes>
-        <Route path='/' element={<Home data={data} blog={blog} roadmap={roadmapData} values={values} />} />
+        <Route path='/' element={<Home data={data} blog={yearsBlog} roadmap={roadmapData} values={values} />} />
         <Route path='/login' element={<SignIn />} />
         <Route path='/admin' element={<Admin data={data} blog={blog} yearsBlog={yearsBlog} roadmap={roadmapData} values={values} />} />
         <Route path='/100-years-of-innovation' element={<About blog={blog} roadmap={roadmapData} />} />
@@ -195,8 +212,18 @@ function App() {
         <Route path='/reimagining-the-next-100-years' element={<NextYears blog={yearsBlog} />} />
       </Routes>
     }
-    
-
+    {isScrolled && (
+        <div 
+        className='fixed bottom-8 right-8 z-50 cursor-pointer'
+        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+      >
+        <IoIosArrowUp 
+          size={35}
+          className='font-bold text-[#AA9767] border-[3px] border-[#AA9767]'
+        />
+      </div>
+  
+    )}
     </div>
   );
 }
