@@ -471,13 +471,6 @@ for(var k = 0 ; k<gridData.length; k++)
 
               <div class="story_main">
                 <div class="story_container">
-                  <div class="card">
-                    <div class="card-image">
-                      <a data-fancybox="gallery" href="https://lipsum.app/id/60/1600x1200">
-                        <img class="rounded" src="https://lipsum.app/id/60/200x150" />
-                      </a>
-                    </div>
-                  </div>
                   {Images.map((res, index) => (
                   <div class="card">
                     <div class="card-image" key={index}>
