@@ -164,7 +164,19 @@ const Family = ({ data }) => {
       return b.id - a.id;
     })
     .slice(0, 10);
+    
+var Images = [];
 
+for(var k = 0 ; k<gridData.length; k++)
+{
+  for(var j=0 ; j<gridData[k].featured_image.length; j++)
+  {
+    Images.push({
+      img_url: gridData[k].featured_image[j],
+  });
+
+  }
+}
   const staticGrid = approved
     .sort((a, b) => {
       return b.id - a.id;
@@ -459,83 +471,16 @@ const Family = ({ data }) => {
 
               <div class="story_main">
                 <div class="story_container">
+                  {Images.map((res, index) => (
                   <div class="card">
-                    <div class="card-image">
-                      <a data-fancybox="gallery" href="https://lipsum.app/id/60/1600x1200">
-                        <img class="rounded" src="https://lipsum.app/id/60/200x150" />
+                    <div class="card-image" key={index}>
+                      <a data-fancybox="gallery" href={res.img_url}>
+                        <img class="rounded" src={res.img_url} />
                       </a>
                     </div>
                   </div>
-                  <div class="card">
-                    <div class="card-image">
-                      <a data-fancybox="gallery" href="https://lipsum.app/id/61/1600x1200">
-                        <img class="rounded" src="https://lipsum.app/id/61/200x150" />
-                      </a>
-                    </div>
-                  </div>
-                  <div class="card">
-                    <div class="card-image">
-                      <a data-fancybox="gallery" href="https://lipsum.app/id/62/1600x1200">
-                        <img class="rounded" src="https://lipsum.app/id/62/200x150" />
-                      </a>
-                    </div>
-                  </div>
-                  <div class="card">
-                    <div class="card-image">
-                      <a data-fancybox="gallery" href="https://lipsum.app/id/63/1600x1200">
-                        <img class="rounded" src="https://lipsum.app/id/63/200x150" />
-                      </a>
-                    </div>
-                  </div>
-                  <div class="card">
-                    <div class="card-image">
-                      <a data-fancybox="gallery" href="https://lipsum.app/id/64/1600x1200">
-                        <img class="rounded" src="https://lipsum.app/id/64/200x150" />
-                      </a>
-                    </div>
-                  </div>
-                  <div class="card">
-                    <div class="card-image">
-                      <a data-fancybox="gallery" href="https://lipsum.app/id/65/1600x1200">
-                        <img class="rounded" src="https://lipsum.app/id/65/200x150" />
-                      </a>
-                    </div>
-                  </div>
-                  <div class="card">
-                    <div class="card-image">
-                      <a data-fancybox="gallery" href="https://lipsum.app/id/66/1600x1200">
-                        <img class="rounded" src="https://lipsum.app/id/66/200x150" />
-                      </a>
-                    </div>
-                  </div>
-                  <div class="card">
-                    <div class="card-image">
-                      <a data-fancybox="gallery" href="https://lipsum.app/id/67/1600x1200">
-                        <img class="rounded" src="https://lipsum.app/id/67/200x150" />
-                      </a>
-                    </div>
-                  </div>
-                  <div class="card">
-                    <div class="card-image">
-                      <a data-fancybox="gallery" href="https://lipsum.app/id/68/1600x1200">
-                        <img class="rounded" src="https://lipsum.app/id/68/200x150" />
-                      </a>
-                    </div>
-                  </div>
-                  <div class="card">
-                    <div class="card-image">
-                      <a data-fancybox="gallery" href="https://lipsum.app/id/69/1600x1200">
-                        <img class="rounded" src="https://lipsum.app/id/69/200x150" />
-                      </a>
-                    </div>
-                  </div>
-                  <div class="card">
-                    <div class="card-image">
-                      <a data-fancybox="gallery" href="https://lipsum.app/id/70/1600x1200">
-                        <img class="rounded" src="https://lipsum.app/id/70/200x150" />
-                      </a>
-                    </div>
-                  </div>
+                  ))}
+
                   <div class="card drop_img">
                     <div class="card-image">
                       <div
