@@ -33,8 +33,8 @@ const NextYears = ({ blog }) => {
   }, []);
 
 
-//console.log(data);
-  const blogData = blog.slice(0, 4);
+console.log(data);
+  //const blogData = blog.slice(0, 4);
 
   const blogs = [
     {
@@ -250,10 +250,10 @@ const NextYears = ({ blog }) => {
                   />
                 </div>
                 <h4 className="mt-4">{blogModalData.title}</h4>
-                <h5 className="mt-2">{blogModalData.title}</h5>
+                <h5 className="mt-2">{blogModalData.author}</h5>
 
                 <br />
-                <p>{parse(`${blogModalData.content}`)}</p>
+                {parse(`${blogModalData.content}`)}
               </div>
             </div>
           </div>
@@ -262,36 +262,6 @@ const NextYears = ({ blog }) => {
       <div id="viewport">
         <div id="content">
           <Header current="Next" />
-          {/* <nav className="navbar fixed-top navbar-expand-lg" id="navbar">
-                <div className="container-fluid">
-                <Link className="navbar-brand" to="/">
-                    <img src={logo} alt="" className="img-fluid" />
-                </Link>
-                <button className="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span className="navbar-toggler-icon"></span>
-                </button>
-                <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul className="navbar-nav mx-auto mb-2 mb-lg-0">
-                        <li className="nav-item">
-                            <Link className="nav-link" to="/100-years-of-innovation">100 Years of Innovation</Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link className="nav-link" to="/ats-family">Technion Stories</Link>
-                        </li>
-                        <li className="nav-item">
-                            <a className="nav-link" target='_blank' href='https://ats.org/centennial/'>Centennial Campaign</a>
-                        </li>
-                        <li className="nav-item">
-                            <Link className="nav-link active" to="/reimagining-the-next-100-years">Reimagining the Next 100 Years</Link>
-                        </li>
-                    </ul>
-                    <a href="https://secure.ats.org/page/61000/donate/1" className="btn btn-donate" target="_blank">Donate Now</a>
-                </div>
-            </div>
-                </nav> */}
-
           <div
             className="relative h-[64vh] bg-cover bg-top"
             style={{ backgroundImage: `url(${nextbg})` }}
@@ -305,24 +275,6 @@ const NextYears = ({ blog }) => {
               </div>
             </div>
           </div>
-
-          {/* <section className="hero" style={{ backgroundImage: `url(${background})`}}>
-                    <div className="container-fluid">
-
-                        <div className="hero_inner">
-                            <div>
-                                <h1 style={{textTransform:'none'}}>
-                                 
-                                    Reimagining the Next 100 Years
-                                     
-                                </h1>
-
-                            </div>
-                        </div>
-                    </div>
-
-          </section> */}
-
           <div className="w-[90%] md:w-[65%] mx-auto mt-12">
             <div>
               <p>
@@ -378,7 +330,7 @@ const NextYears = ({ blog }) => {
                    >
                      {res.title}
                    </h4>
-                   <div className="text-[17px]">{res.title}</div>
+                   <div className="text-[17px]">{res.author}</div>
 
                    <Link
                      onClick={() => {
@@ -404,77 +356,6 @@ const NextYears = ({ blog }) => {
             </div>
           </div>
 
-          {/* <section className="blog_posts">
-            <div className="container-fluid">
-              <div className="blog_inner">
-                <div className="heading">
-                  <p>
-                    Over the past 100 years, fantastic leaps in the advancement
-                    of science and technology have revolutionized the world. The
-                    automobile replaced the horse and buggy; penicillin saved
-                    hundreds of millions of lives; and the invention of the
-                    computer, the World Wide Web, and digital communications and
-                    devices impacted our lives in ways our grandparents couldn’t
-                    have imagined. What will the next 100 years bring?
-                  </p>
-                  <p>
-                    Imagine advancements in biotech that enable personalized
-                    treatments and cures for diseases. Could nanorobots deliver
-                    drugs directly to the site of disease or heal injuries? What
-                    about being able to detect and even prevent disease before
-                    it manifests? Will food be sourced from animals but not come
-                    from them? Will the Technion’s world-leading research in
-                    quantum technologies and artificial intelligence provide
-                    unmatched cybersecurity and unimaginably powerful computers
-                    that will also impact everything around us? We asked four
-                    leading Technion scientists to share the ir visions for
-                    scientific developments in the next 100 years.
-                  </p>
-                </div>
-
-                <div className="wrapper next_wrapper">
-                  {blogData.map((res, index) => {
-                    const route = res.name.toLowerCase().replace(/\s+/g, "-");
-
-                    return (
-                      <div key={index} className="post_wrapper">
-                        <div className="thumbnail">
-                          <img src={res.featured_image} alt="" />
-                        </div>
-                        <div className="content_wrapper">
-                          <div className="inner_wrapper">
-                            <h4
-                              onClick={() => {
-                                setBlogModalData(res);
-                              }}
-                              type="button"
-                              data-bs-toggle="modal"
-                              data-bs-target="#blogModal"
-                            >
-                              {res.name}
-                            </h4>
-
-                            {parse(`${res.description}`)}
-
-                            <a
-                              onClick={() => {
-                                setBlogModalData(res);
-                              }}
-                              type="button"
-                              data-bs-toggle="modal"
-                              data-bs-target="#blogModal"
-                            >
-                              Read More{" "}
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    );
-                  })}
-                </div>
-              </div>
-            </div>
-          </section> */}
 
           <div className="w-full bg-[#F3F7F6] py-8 mt-12 ">
             <div className="w-[90%] md:w-[70%] flex flex-col md:flex-row gap-4 md:items-center justify-center mx-auto">
@@ -518,42 +399,6 @@ const NextYears = ({ blog }) => {
               </div>
             </div>
           </div>
-
-          {/* <section className="message">
-            <div className="container-fluid">
-              <div className="message_inner">
-                <div className="image_wrapper">
-                  <div className="person_wrapper">
-                    <img src={naftali} alt="" />
-                  </div>
-                  <img src={frame} alt="" className="frame img-fluid" />
-                </div>
-                <div className="content">
-                  <div className="heading">
-                    <h6>Naftali Bennett: Technion Pride</h6>
-
-                    <h3 className="cursive">
-                      Naftali Bennett, Israel’s 13th prime minister and a Haifa
-                      native, may have obtained a law degree, but the high-tech
-                      entrepreneur has the spirit, drive, and pride of the
-                      Technion at his core.
-                    </h3>
-                  </div>
-
-                  <a
-                    href="#"
-                    className="btn btn-accent"
-                    type="button"
-                    data-bs-toggle="modal"
-                    data-bs-target="#exampleModal"
-                  >
-                    Read More
-                  </a>
-                </div>
-              </div>
-            </div>
-          </section> */}
-
           <section className="content_block md:h-[450px] flex items-center">
             <div className="container-fluid">
               <div className="content_block_inner">
@@ -568,15 +413,7 @@ const NextYears = ({ blog }) => {
                   </a>
                 </div>
                 <div className="font-semibold">
-                  {/* <div className="qoute">
-                    <h4>
-                      The Technion-Israel Institute of Technology has played a
-                      crucial role in the establishment and vitality of Israel
-                      and in improving the lives of people worldwide since
-                      opening its doors in 1924. And no other institution holds
-                      more promise for Israel’s future.
-                    </h4>
-                  </div> */}
+               
                   <p>
                     Your support of the Technion will help solve many of
                     humanity's most pressing global challenges. The Global
@@ -584,9 +421,7 @@ const NextYears = ({ blog }) => {
                     in four critical areas: climate change and sustainability,
                     human health, impact technologies, and Israel's security.
                   </p>
-                  {/* <a href="#" className="btn btn-ghost">
-                    EXPLORE KEYSTONE OPPORTUNITIES{" "}
-                  </a> */}
+                 
                 </div>
               </div>
             </div>
