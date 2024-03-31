@@ -745,17 +745,17 @@ const Home = ({ data, blog, roadmap, values }) => {
             <div className="mt-8">
               <div
                 style={{ fontFamily: "Adobe Caslon Pro" }}
-                className="text-[19px] italic leading-loose"
+                className="text-[21px] italic leading-loose"
               >
                 “It’s fortunate that the Technion existed before the State of
                 Israel. If it had been the other way around, who knows what
                 would have happened. The Technion created the State of Israel
                 and deserves the credit for this.”
               </div>
-              <div className="text-righ font-light text-[16px] mt-2">
+              <div className="text-righ font-light text-[14px] mt-2">
                 PRIME MINISTER AND PRESIDENT OF ISRAEL
               </div>
-              <div className="text-righ font-light text-[16px] mt-1">
+              <div className="text-righ font-light text-[14px] mt-1">
                 SHIMON PERES
               </div>
             </div>
@@ -854,7 +854,7 @@ const Home = ({ data, blog, roadmap, values }) => {
             return (
               <div
                 key={index}
-                className="relative w-[330px] h-[200px] md:w-[440px] md:h-[300px] overflow-hidden group"
+                className="relative w-[300px] h-[200px] md:w-[495px] md:h-[300px] overflow-hidden group mb-3"
               >
                 <img
                   src={res.featured_image}

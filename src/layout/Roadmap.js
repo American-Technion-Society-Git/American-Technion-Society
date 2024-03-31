@@ -73,12 +73,6 @@ const Roadmap = ({ roadmap, roadmapPage }) => {
         }
       }
 
-      if (roadmap.length > 0) {
-        let roadmap_height =
-          document.querySelector(".roadmap_list1").clientHeight - 400;
-        draggableFunc(roadmap_height);
-        ScrollTrigger.refresh();
-      }
     }
   }, [roadmap]); // Include roadmap as a dependency for the useEffect
 
@@ -107,43 +101,29 @@ const Roadmap = ({ roadmap, roadmapPage }) => {
 
   return (
     <>
-      <div className="bg-[#b6a781] pb-12 ">
+      <div className="bg-[#b6a781] pb-12 home_roadmap">
         <div className="font-semibold text-4xl text-center text-white py-12">
           Technion Stories
         </div>
 
         <div className="relative w-[95%] md:w-[70%] mx-auto ">
-          <div className="scroll-area sm:h-[1100px] sm:overflow-y-hidden ">
-            {roadmap.length > 0 &&
-              data.map((res, index) => (
-                <div className="relative flex gap-2 h-[420px] roadmap_list1 group overflow-hidden">
-                  <div className="w-[35%] sm:w-[45%]  mt-2">
-                    <div className="ml-auto mr-4 size-[120px] sm:size-[180px] md:size-[250px] rounded-full overflow-hidden">
-                      <img
-                        src={res.featured_image}
-                        alt="Year Image"
-                        className="size-[150% size-[120px] sm:size-[180px] md:size-[380px] object-cover md:object-center "
-                      />
-                    </div>
-                  </div>
-                  <div className="w-[6%] overflow-hidden">
-                    <img src={dividerLine} alt="line" className="w-6 mx-auto" />
-                  </div>
-                  <div className="w-[59%] sm:w-[45%] font-semibold mt-4">
-                    <div className="text-[#094D9A] text-3xl md:text-4xl">{res.year}</div>
-                    <p className="w-[100%] sm:w-[60%] text-white text-[14px] leading-snug sm:text-[16px] md:text-[18px] font-medium">
-                      {res.name}
-                    </p>
-                  </div>
-                  {/* <div className="absolute top-[58%] left-[30%] transform -translate-y-1/2 transition-transform duration-[1000ms] translate-x-[100vw] group-hover:translate-x-0">
-                    <img
-                      src={ellipse}
-                      alt="elipse"
-                      className=" opacity-[0.92] size-[100%]"
-                    />
-                  </div> */}
+          <div className="scroll-area sm:h-[1000px] sm:overflow-y-hidden ">
+                <div class="timeline">
+                  <ul>
+                  {roadmap.length > 0 &&
+                    data.map((res, index) => (
+                    <li>
+                      <div class="time">
+                        <img src={res.featured_image} alt="Year Image" />
+                      </div>
+                      <div class="content">
+                        <h3>{res.year}</h3>
+                        <p>{res.name}</p>
+                      </div>
+                    </li>
+                    ))}
+                  </ul>
                 </div>
-              ))}
           </div>
 
           {!roadmapPage && (
