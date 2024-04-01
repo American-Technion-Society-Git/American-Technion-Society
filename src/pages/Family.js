@@ -177,6 +177,7 @@ for(var k = 0 ; k<gridData.length; k++)
 
   }
 }
+var newArr = Images.slice(3, Images.length-1);
   const staticGrid = approved
     .sort((a, b) => {
       return b.id - a.id;
@@ -454,12 +455,6 @@ for(var k = 0 ; k<gridData.length; k++)
                 Placeholder for Cathy & Jim Deutchman Video
               </h4>
             </div>
-
-            
-
-                  
-              
-              
             </div>
             <div className="bg-[#002147] story_gallary">
               <div className="w-[94%] md:w-[70%] mx-auto my-12">
@@ -476,79 +471,30 @@ for(var k = 0 ; k<gridData.length; k++)
                 </div>
                 <div class="story_main">
                   <div class="story_container">
+                  {Images.map((res, index) => (
+                    index<4
+                    ?
                     <div class="card">
-                      <div class="card-image">
-                        <a data-fancybox="gallery" href="https://firebasestorage.googleapis.com/v0/b/american-technion-society.appspot.com/o/6472697-undefined?alt=media&amp;token=d5f6b84f-b95f-4063-9d25-8e82f3817a17">
-                          <img alt="imgage" title="image" class="rounded" src="https://firebasestorage.googleapis.com/v0/b/american-technion-society.appspot.com/o/6472697-undefined?alt=media&amp;token=d5f6b84f-b95f-4063-9d25-8e82f3817a17" />
+                      <div class="card-image" key={index}>
+                        <a data-fancybox="gallery" href={res.img_url}>
+                          <img alt="imgage" title="image" class="rounded" src={res.img_url} />
                         </a>
                       </div>
                     </div>
-                    <div class="card">
-                      <div class="card-image">
-                        <a data-fancybox="gallery" href="https://firebasestorage.googleapis.com/v0/b/american-technion-society.appspot.com/o/9972622-undefined?alt=media&amp;token=6e01c9ff-ce2c-487f-8229-bb12d41d4854">
-                          <img alt="imgage" title="image" class="rounded" src="https://firebasestorage.googleapis.com/v0/b/american-technion-society.appspot.com/o/9972622-undefined?alt=media&amp;token=6e01c9ff-ce2c-487f-8229-bb12d41d4854" />
-                        </a>
-                      </div>
-                    </div>
-                    <div class="card">
-                      <div class="card-image">
-                        <a data-fancybox="gallery" href="https://firebasestorage.googleapis.com/v0/b/american-technion-society.appspot.com/o/4487391-undefined?alt=media&amp;token=fdef098b-84a2-4aa0-ad92-16d0b945147a">
-                          <img alt="imgage" title="image" class="rounded" src="https://firebasestorage.googleapis.com/v0/b/american-technion-society.appspot.com/o/4487391-undefined?alt=media&amp;token=fdef098b-84a2-4aa0-ad92-16d0b945147a" />
-                        </a>
-                      </div>
-                    </div>
-                    <div class="card">
-                      <div class="card-image">
-                        <a data-fancybox="gallery" href="https://firebasestorage.googleapis.com/v0/b/american-technion-society.appspot.com/o/3523273-undefined?alt=media&amp;token=825797ad-ecd3-48da-92ce-4022ba3d0aa5">
-                          <img alt="imgage" title="image" class="rounded" src="https://firebasestorage.googleapis.com/v0/b/american-technion-society.appspot.com/o/3523273-undefined?alt=media&amp;token=825797ad-ecd3-48da-92ce-4022ba3d0aa5" />
-                        </a>
-                      </div>
-                    </div>
+                    : null
+                    ))}
                   </div>
                   <div class="story_container_2">
                     <div class="story_container_row">
-                      <div class="card">
+                    {newArr.map((val, index) => (
+                      <div class="card" key={index}>
                         <div class="card-image">
-                          <a data-fancybox="gallery" href="https://firebasestorage.googleapis.com/v0/b/american-technion-society.appspot.com/o/2173692-undefined?alt=media&amp;token=1c63eb36-de1d-427f-952d-a159e2604fe1">
-                            <img alt="imgage" title="image" class="rounded" src="https://firebasestorage.googleapis.com/v0/b/american-technion-society.appspot.com/o/2173692-undefined?alt=media&amp;token=1c63eb36-de1d-427f-952d-a159e2604fe1" />
+                          <a data-fancybox="gallery" href={val.img_url}>
+                            <img alt="imgage" title="image" class="rounded" src={val.img_url} />
                           </a>
                         </div>
                       </div>
-                      <div class="card">
-                        <div class="card-image">
-                          <a data-fancybox="gallery" href="https://firebasestorage.googleapis.com/v0/b/american-technion-society.appspot.com/o/4332320-undefined?alt=media&amp;token=5ec74569-a995-43c4-9f3c-9c840c2549e0">
-                            <img alt="imgage" title="image" class="rounded" src="https://firebasestorage.googleapis.com/v0/b/american-technion-society.appspot.com/o/4332320-undefined?alt=media&amp;token=5ec74569-a995-43c4-9f3c-9c840c2549e0" />
-                          </a>
-                        </div>
-                      </div>
-                      <div class="card">
-                        <div class="card-image">
-                          <a data-fancybox="gallery" href="https://firebasestorage.googleapis.com/v0/b/american-technion-society.appspot.com/o/9187806-undefined?alt=media&amp;token=b323f39e-521a-4c6e-9b35-910ada4f6069">
-                            <img alt="imgage" title="image" class="rounded" src="https://firebasestorage.googleapis.com/v0/b/american-technion-society.appspot.com/o/9187806-undefined?alt=media&amp;token=b323f39e-521a-4c6e-9b35-910ada4f6069" />
-                          </a>
-                        </div>
-                      </div>
-                      <div class="card">
-                        <div class="card-image">
-                          <a data-fancybox="gallery" href="https://firebasestorage.googleapis.com/v0/b/american-technion-society.appspot.com/o/979134-undefined?alt=media&amp;token=9b4ec284-7f1a-410d-8008-bdc0a05b8777">
-                            <img alt="imgage" title="image" class="rounded" src="https://firebasestorage.googleapis.com/v0/b/american-technion-society.appspot.com/o/979134-undefined?alt=media&amp;token=9b4ec284-7f1a-410d-8008-bdc0a05b8777" />
-                          </a>
-                        </div>
-                      </div>
-                      <div class="card">
-                        <div class="card-image">
-                          <a data-fancybox="gallery" href="https://firebasestorage.googleapis.com/v0/b/american-technion-society.appspot.com/o/5215312-undefined?alt=media&amp;token=4b91ad16-9c51-44da-9ad0-191854ed028c">
-                            <img alt="imgage" title="image" class="rounded" src="https://firebasestorage.googleapis.com/v0/b/american-technion-society.appspot.com/o/5215312-undefined?alt=media&amp;token=4b91ad16-9c51-44da-9ad0-191854ed028c" />
-                          </a>
-                        </div>
-                      </div>
-                      <div class="card">
-                        <div class="card-image">
-                          <a data-fancybox="gallery" href="https://firebasestorage.googleapis.com/v0/b/american-technion-society.appspot.com/o/7662107-undefined?alt=media&amp;token=78f73313-0946-473f-9afb-ec5297b5109b">
-                            <img alt="imgage" title="image" class="rounded" src="https://firebasestorage.googleapis.com/v0/b/american-technion-society.appspot.com/o/7662107-undefined?alt=media&amp;token=78f73313-0946-473f-9afb-ec5297b5109b" />
-                          </a>
-                        </div>
-                      </div>
+                      ))}
                     </div>
 
                     <div class="card drop_img">
