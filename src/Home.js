@@ -44,6 +44,8 @@ const Home = ({ data, blog, roadmap, values }) => {
   const [approved, setApproved] = useState([]);
   const [storySubmission, setStorySubmission] = useState(false);
   const [blogModalData, setBlogModalData] = useState({});
+  const [posts, setData] = useState([]);
+
 
   const linkRef = useRef(null);
 
@@ -92,6 +94,8 @@ const Home = ({ data, blog, roadmap, values }) => {
   ];
 
   const blogData = blog.slice(0, 4);
+  console.log(posts);
+
   // console.log(blog);
   delete values[1];
   // Img Uploader
@@ -234,6 +238,14 @@ const Home = ({ data, blog, roadmap, values }) => {
     seperatingData();
   }, [data]);
 
+
+  useEffect(() => {
+    fetch('https://p67.d21.myftpupload.com/wp-json/showFavorites/v2?post_type=post')
+      .then(response => response.json())
+      .then(json => setData(json.data))
+      .catch(error => console.error(error));
+  }, []);
+
   const sliderData = approved
     .sort((a, b) => {
       return b.id - a.id;
@@ -307,11 +319,11 @@ const Home = ({ data, blog, roadmap, values }) => {
             <div className="modal-body">
               <div>
                 <br />
-                <img width={"100%"} src={blogModalData.featured_image} />
-                <h4 className="mt-4">{blogModalData.name}</h4>
+                <img width={"100%"} src={blogModalData.image} />
+                <h4 className="mt-4">{blogModalData.title}</h4>
                 <br />
-                {blogModalData.description && (
-                  <p>{parse(`${blogModalData.description}`)}</p>
+                {blogModalData.content && (
+                  <p>{parse(`${blogModalData.content}`)}</p>
                 )}
                 {blogModalData.quote && (
                   <p>{parse(`${blogModalData.quote}`)}</p>
@@ -512,203 +524,6 @@ const Home = ({ data, blog, roadmap, values }) => {
         Launch demo modal
       </button>
 
-      {/* <div
-        className="modal fade myModal"
-        id="storyModal"
-        tabIndex="-1"
-        aria-labelledby="storyModalLabel"
-        aria-hidden="true"
-      >
-        <div className="modal-dialog modal-lg">
-          <div className="modal-content">
-            <div className="modal-header">
-              <h5 className="modal-title" id="storyModalLabel">
-                Submit a Story
-              </h5>
-              <button
-                type="button"
-                className="btn-close"
-                data-bs-dismiss="modal"
-                aria-label="Close"
-              ></button>
-            </div>
-            {storySubmission ? (
-              <div className="modal-body thanks">
-                <svg
-                  width="72"
-                  height="72"
-                  viewBox="0 0 72 72"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M35.8646 0.5C16.3895 0.5 0.519531 16.37 0.519531 35.8451C0.519531 55.3203 16.3895 71.1902 35.8646 71.1902C55.3398 71.1902 71.2097 55.3203 71.2097 35.8451C71.2097 16.37 55.3398 0.5 35.8646 0.5ZM48.5535 30.8614L36.1121 43.3029C35.5819 43.8331 34.9103 44.0805 34.2387 44.0805C33.5672 44.0805 32.8603 43.8331 32.3655 43.3029L26.1447 37.0822C25.0844 36.0572 25.0844 34.3606 26.1447 33.3356C27.1697 32.3106 28.8663 32.3106 29.8913 33.3356L34.2387 37.6831L44.8069 27.1149C45.832 26.0899 47.4932 26.0899 48.5535 27.1149C49.5785 28.1399 49.5785 29.8364 48.5535 30.8614Z"
-                    fill="#114A99"
-                  />
-                </svg>
-
-                <h4>Thank you for your Submission</h4>
-              </div>
-            ) : (
-              <>
-                <div className="modal-body">
-                  <p>
-                    Share your story from your memorable visit to the campus.
-                    Let's build a collage of cherished experiences together.
-                  </p>
-                  <div className="body">
-                    <div className="imageWrapper">
-                      <img src={imgUrl[0]} width={"100%"} />
-                      {fileLoader ? (
-                        <p>Loading ...</p>
-                      ) : (
-                        <button
-                          className="disabled"
-                          onClick={() => {
-                            document.getElementById("fileElem").click();
-                          }}
-                        >
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="24"
-                            height="24"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                          >
-                            <path
-                              d="M12 21.25C6.89 21.25 2.75 17.11 2.75 12C2.75 6.89 6.89 2.75 12 2.75C17.11 2.75 21.25 6.89 21.25 12C21.25 17.11 17.11 21.25 12 21.25Z"
-                              stroke="black"
-                              strokeWidth="1.5"
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                            />
-                            <path
-                              d="M13.89 10.08L10.11 13.92"
-                              stroke="black"
-                              strokeWidth="1.5"
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                            />
-                            <path
-                              d="M10.11 10.08L13.89 13.92"
-                              stroke="black"
-                              strokeWidth="1.5"
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                            />
-                          </svg>
-                          Add More Images
-                        </button>
-                      )}
-                    </div>
-                    <div className="contentForm">
-                      <input
-                        className="form-control"
-                        value={name}
-                        placeholder="Name"
-                        onChange={(e) => setName(e.target.value)}
-                        required
-                      />
-                      <input
-                        className="form-control"
-                        type="email"
-                        placeholder="Email"
-                        value={storyEmail}
-                        onChange={(e) => setStoryEmail(e.target.value)}
-                        required
-                      />
-                      <CKEditor
-                        editor={ClassicEditor}
-                        data={description}
-                        onChange={(event, editor) => {
-                          const data = editor.getData();
-                          setDescription(data);
-                        }}
-                        config={{
-                          toolbar: ["bold", "italic"],
-                        }}
-                      />
-                    </div>
-                  </div>
-                </div>
-                <div className="modal-footer">
-                  <p className="sm">
-                    By submitting your photo and quote, you agree to comply with
-                    our Terms of Use. Ensure that you have the right to share
-                    the content, and refrain from violating any copyright or
-                    intellectual property rights. Our team reserves the right to
-                    review and approve submissions.
-                  </p>
-                  <div className="btn_wrapper">
-                    <button
-                      id="close-btn"
-                      type="button"
-                      className="btn btn-secondary"
-                      data-bs-dismiss="modal"
-                    >
-                      Close
-                    </button>
-                    {!fileLoader && (
-                      <button
-                        type="button"
-                        className={
-                          storySubmission
-                            ? "btn btn-accent disabled"
-                            : "btn btn-accent"
-                        }
-                        onClick={() => dataUploader()}
-                      >
-                        Submit Story
-                      </button>
-                    )}
-                    {fileLoader && fileLoader && (
-                      <button
-                        type="button"
-                        className="btn btn-accent disabled"
-                        onClick={() => dataUploader()}
-                      >
-                        Submit Story
-                      </button>
-                    )}
-                  </div>
-                </div>
-              </>
-            )}
-          </div>
-        </div>
-      </div> */}
-
-      {/* <div className="container-fluid">
-                <nav className="navbar fixed-top navbar-expand-lg">
-                    <div className="container-fluid">
-                        <Link className="navbar-brand" to="/">
-                            <img src={logo} alt="" className="img-fluid" />
-                        </Link>
-                        <button className="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                            aria-expanded="false" aria-label="Toggle navigation">
-                            <span className="navbar-toggler-icon"></span>
-                        </button>
-                        <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                            <ul className="navbar-nav mx-auto mb-2 mb-lg-0">
-                                <li className="nav-item">
-                                    <Link className="nav-link" to="/100-years-of-innovation">100 Years of Innovation</Link>
-                                </li>
-                                <li className="nav-item">
-                                    <Link className="nav-link" to="/ats-family">Technion Stories</Link>
-                                </li>
-                                <li className="nav-item">
-                                    <a className="nav-link" target='_blank' href='https://ats.org/centennial/'>Centennial Campaign</a>
-                                </li>
-                                <li className="nav-item">
-                                    <Link className="nav-link" to="/reimagining-the-next-100-years">Reimagining the Next 100 Years</Link>
-                                </li>
-                            </ul>
-                            <a href="https://secure.ats.org/page/61000/donate/1" className="btn btn-donate" target="_blank">Donate Now</a>
-                        </div>
-                    </div>
-                </nav>
-            </div> */}
 
       <section className="hero relative overflow-hidden shadow-sm">
         <video autoPlay loop muted className="object-contain">
@@ -723,16 +538,7 @@ const Home = ({ data, blog, roadmap, values }) => {
               <h4 className="text-[25px]">The Technion Centennial</h4>
               <h2>Reimagining the Next 100 Years</h2>
             </div>
-            {/* <div className="qoute">
-                                <h4>
-                                    “It’s fortunate that the Technion existed before the State of Israel. If it had been
-                                    the other way around, who knows what would have happened. The Technion created the
-                                    State of Israel and deserves the credit for this.”
-                                </h4>
-                                <p>
-                                    Prime Minister and President of Israel Shimon Peres
-                                </p>
-                            </div> */}
+            
             {values.map((res, index) => {
               ScrollTrigger.refresh();
               return (
@@ -745,17 +551,17 @@ const Home = ({ data, blog, roadmap, values }) => {
             <div className="mt-8">
               <div
                 style={{ fontFamily: "Adobe Caslon Pro" }}
-                className="text-[19px] italic leading-loose"
+                className="text-[21px] italic leading-loose"
               >
                 “It’s fortunate that the Technion existed before the State of
                 Israel. If it had been the other way around, who knows what
                 would have happened. The Technion created the State of Israel
                 and deserves the credit for this.”
               </div>
-              <div className="text-righ font-light text-[16px] mt-2">
+              <div className="text-righ font-light text-[14px] mt-2">
                 PRIME MINISTER AND PRESIDENT OF ISRAEL
               </div>
-              <div className="text-righ font-light text-[16px] mt-1">
+              <div className="text-righ font-light text-[14px] mt-1">
                 SHIMON PERES
               </div>
             </div>
@@ -807,57 +613,19 @@ const Home = ({ data, blog, roadmap, values }) => {
             the big scientific advances that will change the ways we live.
           </p>
         </div>
-        {/* <div className="wrapper">
-                            {
-                                blogData.map((res, index) => {
-                                    ScrollTrigger.refresh();
-                                    const route = res.name.toLowerCase().replace(/\s+/g, '-')
-                                    return (
-                                            <div key={index} className="post_wrapper">
-                                                <div className="thumbnail">
-                                                    <img src={res.featured_image} alt="" 
-                                                    onClick={() => {
-                                                        setBlogModalData(res)
-                                                    }}
-                                                    />
-                                                </div>
-                                                <div className="content_wrapper">
-                                                    <div className="inner_wrapper">
-                                                        <h4 onClick={() => {
-                                                            setBlogModalData(res)
-                                                        }} data-bs-toggle="modal" data-bs-target="#blogModal">
-                                                            {res.name}
-                                                        </h4>
-                                                        <p>
-                                                            {
-                                                                parse(`${res.description}`)
-                                                            }
-                                                        </p>
-                                                        <Link onClick={() => {
-                                                            setBlogModalData(res)
-                                                        }} to="/"
-                                                            type="button" data-bs-toggle="modal" data-bs-target="#blogModal"
-                                                        >Read More </Link>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                    )
-                                })
-                            }
-                        </div> */}
+       
 
         <div className="grid grid-cols-1 xl:grid-cols-2 justify-items-center gap-y-4 mt-4">
-          {blogs.map((res, index) => {
-            console.log(res.featured_image);
+          {posts.map((res, index) => {
             ScrollTrigger.refresh();
-            const route = res.name.toLowerCase().replace(/\s+/g, "-");
+            const route = res.title.toLowerCase().replace(/\s+/g, "-");
             return (
               <div
                 key={index}
-                className="relative w-[330px] h-[200px] md:w-[440px] md:h-[300px] overflow-hidden group"
+                className="relative w-[300px] h-[200px] md:w-[495px] md:h-[300px] overflow-hidden group mb-3"
               >
                 <img
-                  src={res.featured_image}
+                  src={res.image}
                   alt="Blog Image"
                   className="absolute z-40 hover:z-0 hover:opacity-20 object-cover w-full h-full"
                   onClick={() => {
@@ -877,7 +645,7 @@ const Home = ({ data, blog, roadmap, values }) => {
                       }}
                       // data-bs-toggle="modal" data-bs-target="#blogModal"
                     >
-                      {res.name}
+                      {res.title}
                     </h4>
 
                     <Link

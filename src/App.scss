@@ -1084,7 +1084,7 @@ h4 {
     font-family: "Neue Haas Grotesk Display", sans-serif;
 }
 .footer {
-    background: #002147;
+    background: #094d9a;
     padding: 6rem 0rem 2rem 0rem;
 
     .footer_inner {
@@ -2264,11 +2264,27 @@ color: slategray !important;
 .quote_txt {
     font-size: 18px;
 }
-
+.story_gallary {
+    padding: 5px 0 0;
+}
 
 .story_main {
     padding: 50px 0;
     .story_container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 1rem;
+      justify-content: center;
+      align-items: center;
+    }
+    .story_container_2 {
+      display: grid;
+      grid-template-columns: 1fr 24%;
+      grid-gap: 1rem;
+      justify-content: center;
+      margin-top: 15px;
+    }
+    .story_container_row {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       grid-gap: 1rem;
@@ -2279,7 +2295,8 @@ color: slategray !important;
     .card {
       color: #000;
       border-radius: 2px;
-      background: #fff;
+      border: none;
+      background: none;
     //   box-shadow: $box-shadow;
   
       &-image {
@@ -2287,7 +2304,6 @@ color: slategray !important;
         display: block;
         width: 100%;
         padding-top: 70%;
-        background: #fff;
   
         img {
           display: block;
@@ -2304,6 +2320,11 @@ color: slategray !important;
   .drop_img .card-image {
         padding-top: 0;
         text-align: center;
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+    .drop_img .card-image .drop_box {
         height: 100%;
         display: flex;
         align-items: center;
@@ -2325,5 +2346,132 @@ color: slategray !important;
         grid-template-columns: 1fr;
         grid-gap: 1rem;
       }
+    }
+  }
+  @media (max-width: 1100px) {
+    .home_roadmap .roadmap_list1 p {
+        font-size: 14px !important;
+    }
+    
+    .home_roadmap .roadmap_list1 {
+        height: 316px;
+    }
+  }
+  @media (max-width: 631px) {
+    .home_roadmap .roadmap_list1 p {
+        font-size: 14px !important;
+    }
+    
+    .home_roadmap .roadmap_list1 {
+        height: 260px;
+    }
+  }
+
+  .timeline{
+    position:relative;
+    margin:0 auto;
+    box-sizing:border-box;
+    background: #b6a781;
+    height: 100%;
+  }
+  .timeline ul{
+    padding:0;
+    margin:0;
+  }
+  .timeline ul li{
+    list-style:none;
+    position:relative;
+    width:55%;
+    padding:20px 90px 20px 40px;
+    box-sizing:border-box;
+    border-left: 2px solid #fff;
+  }
+  .timeline ul li{
+    float:right;
+    text-align:left;
+    clear:both;
+  }
+  .content{
+    padding-bottom:20px;
+    min-height: 200px;
+  }
+  .timeline ul li:before
+  {
+    content:'';
+    position:absolute;
+    width:24px;
+    height:24px;
+    top:24px;
+    left:-10px;
+    background:#094d9a;
+    border-radius:50%;
+  }
+  .timeline ul li h3{
+    padding:0;
+    margin:0;
+    color:#094d9a;
+    font-weight:700;
+    font-size: 35px;
+  }
+  .timeline ul li p{
+    margin:10px 0 0;
+    padding:0;
+    color: #fff;
+    font-size: 18px !important;
+  }
+  .timeline ul li .time img{
+    margin:0;
+    padding:0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .timeline ul li .time
+  {
+    position:absolute;
+    top: 7px;
+    left: -300px;
+    margin:0;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 100%;
+    overflow: hidden;
+  }
+  @media(max-width:1000px)
+  {
+    .timeline{
+      width:100%;
+    }
+  }
+  @media(max-width:767px){
+    .content {
+        min-height: 100%;
+    }
+    .timeline{
+      width:100%;
+      padding-bottom:0;
+      display: inline-block;
+    }
+    .timeline ul {
+        padding-left: 20px;
+    }
+    .timeline ul li
+    {
+      width:100%;
+      text-align:left;
+      padding: 0 20px 25px 50px;
+    }
+    .timeline ul li:before
+    {
+      top: 0px;
+      left: -11px;
+    }
+    .timeline ul li .time{
+      position: static;
+      padding: 0
+    }
+    .timeline ul li p {
+        font-size: 14px !important;
     }
   }
