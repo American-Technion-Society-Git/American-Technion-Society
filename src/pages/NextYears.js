@@ -241,7 +241,7 @@ console.log(data);
             <div className="modal-body">
               <div>
                 <br />
-                <div className="w-full h-[400px] overflow-hidden">
+                <div className="w-full overflow-hidden">
                   <img
                     width={"100%"}
                     height={"200px"}
