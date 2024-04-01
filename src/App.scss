@@ -1087,7 +1087,7 @@ h4 {
 .footer {
     background: #094d9a;
     padding: 6rem 0rem 2rem 0rem;
-
+    
     .footer_inner {
         display: grid;
         grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -1101,7 +1101,7 @@ h4 {
             }
 
             img {
-                max-width: 14.5rem;
+                max-width: 14.2rem;
                 margin-bottom: 25px;
             }
 
@@ -1138,6 +1138,11 @@ h4 {
         a {
             font-size: 0.9rem;
         }
+    }
+}
+@media (min-width: 768px) {
+    .footer .container-fluid {
+        max-width: 1240px;
     }
 }
 
@@ -2476,3 +2481,4 @@ color: slategray !important;
         font-size: 14px !important;
     }
   }
+  
