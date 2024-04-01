@@ -249,7 +249,7 @@ Former Prime Minister Of Israel Golda Meir
                           >
                             {res.name}
                           </h4>
-                          {parse(`${res.description}`)}
+                          {parse(`${res.description.substr(0,195)}`)}
                           <a
                             onClick={() => {
                               setBlogModalData(res);

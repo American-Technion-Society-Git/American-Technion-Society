@@ -301,38 +301,25 @@ console.log(data);
                 the next 100 years.
               </p>
             </div>
-
-            <div className="grid grid-cols-1 xl:grid-cols-2 justify-items-center gap-y-4 mt-4">
+            <div class="reimagining_blog row">
             {data.map((res) => (
 
-               <div key={res.id} className="w-[330px] md:w-[460px] mb-4">
-               <div
-                 className="w-[330px] h-[200px] md:w-[460px] md:h-[300px] overflow-hidden cursor-pointer"
-                 onClick={() => handleClick(res.id)}
-               >
-                 <img
-                   src={res.image}
-                   alt="Blog Image"
-                   className="object-cover w-full h-full"
-                   onClick={() => {
+	<div class="col-sm-6 mb-4">
+		<div class="overflow-hidden cursor-pointer">
+			<img src={res.image} 
+      alt="Blog Image" 
+      class="object-cover w-full h-full" 
+      onClick={() => {
                      setBlogModalData(res);
-                   }}
-                 />
-               </div>
-               <div className="">
-                 <div className="flex flex-col gap- mt-2 pr-32 h-full w-full text-[#002147] font-semibold">
-                   <h4
-                     onClick={() => {
+                   }}/>
+		</div>
+		<div class="mb-2">
+			<div class="flex flex-col gap- mt-2 h-full w-full text-[#002147] font-semibold">
+				<h4 onClick={() => {
                        setBlogModalData(res);
-                     }}
-
-                     // data-bs-toggle="modal" data-bs-target="#blogModal"
-                   >
-                     {res.title}
-                   </h4>
-                   <div className="text-[17px]">{res.author}</div>
-
-                   <Link
+                     }}>{res.title}</h4>
+				<div class="text-[17px]">{res.author}</div>
+        <Link
                      onClick={() => {
                        setBlogModalData(res);
                      }}
@@ -343,17 +330,17 @@ console.log(data);
                      data-bs-toggle="modal"
                      data-bs-target="#blogModal"
                    >
-                     <div className="flex items-center gap-1 text-[#094D9A] border-b-[3px] border-[#A7986D]">
+				<div className="flex items-center gap-1 text-[#094D9A] border-b-[3px] border-[#A7986D]">
                        Read More 
                        <FaArrowRight className="text-base"/>
                      </div>
                      
                    </Link>
-                 </div>
-               </div>
-             </div>
-              ))}
-            </div>
+			</div>
+		</div>
+	</div>
+	))}
+</div>
           </div>
 
 

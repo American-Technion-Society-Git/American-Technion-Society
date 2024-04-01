@@ -184,7 +184,6 @@ var newArr = Images.slice(3, Images.length-1);
     })
     .slice(0, 3);
 
-  // console.log(staticGrid);
 
   const [text, setText] = useState("");
   const maxCharacterCount = 1000; // Set your desired maximum character count
@@ -476,7 +475,7 @@ var newArr = Images.slice(3, Images.length-1);
                     ?
                     <div class="card">
                       <div class="card-image" key={index}>
-                        <a data-fancybox="gallery" href={res.img_url}>
+                        <a data-fancybox="gallery" href={res.img_url}   data-caption="American Technion Society">
                           <img alt="imgage" title="image" class="rounded" src={res.img_url} />
                         </a>
                       </div>
