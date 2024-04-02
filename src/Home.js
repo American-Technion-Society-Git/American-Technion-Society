@@ -321,6 +321,7 @@ const Home = ({ data, blog, roadmap, values }) => {
                 <br />
                 <img width={"100%"} src={blogModalData.image} />
                 <h4 className="mt-4">{blogModalData.title}</h4>
+                <div class="text-[17px]">{blogModalData.author}</div>
                 <br />
                 {blogModalData.content && (
                   <p>{parse(`${blogModalData.content}`)}</p>
