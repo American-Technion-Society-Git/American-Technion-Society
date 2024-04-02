@@ -10,6 +10,7 @@ import { Link } from "react-router-dom";
 import Footer from "../layout/Footer";
 import parse from "html-react-parser";
 import Header from "../layout/Header";
+import { IoMdClose } from "react-icons/io";
 
 import blog1 from "../assets/blogs/blog1.png";
 import blog2 from "../assets/blogs/blog2.png";
@@ -85,159 +86,159 @@ console.log(data);
         aria-hidden="true"
       >
         <div className="modal-dialog">
-          <div className="modal-content">
+          <div className="modal-content rounded-none">
             <div className="modal-header">
               {/* <h5 className="modal-title" id="exampleModalLabel">
                 Naftali Bennett
               </h5> */}
-              <button
+              <IoMdClose
                 type="button"
-                className="btn-close"
+                size={35}
+                className="border-[3px] border-[#AA9767] text-[#AA9767] ml-auto"
                 data-bs-dismiss="modal"
                 aria-label="Close"
-              ></button>
+              ></IoMdClose>
             </div>
             <div className="modal-body">
-              <section className="message">
-                <div className="container-fluid">
-                  <div className="message_inner">
-                    <div className="image_wrapper">
-                      <div className="person_wrapper">
-                        <img src={naftali} alt="" />
+              <section className="message bg-white">
+              <div className="container-fluid">
+                <div className="message_inner">
+                <div className="image_wrapper">
+                      <div className="rounded-full size-96 overflow-hidden">
+                        <img src={bennet} alt="Naftali" className=" " />
                       </div>
-                      <img src={frame} alt="" className="frame img-fluid" />
                     </div>
-                    <div className="content">
-                      <div className="heading">
-                          <h4>Naftali Bennett: Technion Pride</h4>
-                          <p className="cursive font-bold mt-3 leading-normal">
-                            Naftali Bennett, Israel’s 13th prime minister and a
-                            Haifa native, may have obtained a law degree, but the
-                            high-tech entrepreneur has the spirit, drive, and
-                            pride of the Technion at his core.
-                          </p>
-                          <p className="mt-3">
-                            “I grew up in the Technion; it was really central to
-                            my identity,” the former prime minister said in a
-                            recent interview with ATS staff.
-                          </p>
-                          <br />
-                          <p>
-                            His father, Jim Bennett, worked in the Technion’s
-                            fundraising department. “Every Friday, my family would
-                            go to the Technion pool, and I’d watch my f ather play
-                            basketball. It was just a fundamental part of who I
-                            was.”
-                          </p>
-                          <br />
-                          <p>
-                            Growing up in the Technion’s shadow also created high
-                            expectations and pride. “The Technion projected an
-                            aura of excellence and science into the city.” The
-                            Technion’s leading role in hig h tech and
-                            entrepreneurship also clearly impacted the former
-                            prime minister. In 1996, Mr. Bennett began pursuing a
-                            degree in law at The Hebrew University of Jerusalem,
-                            while at the same time starting work for a software
-                            company.
-                          </p>
-                          <br />
-                          <p>
-                            By 1999, he had co - founded an anti - fraud company
-                            in New York called Cyota. He served as its chief
-                            executive officer until Cyota was sold in 2005 to U.S.
-                            - based RSA Security for $145 million. Always a
-                            staunch Zionist, he included a stipulation that the
-                            Israeli arm remain intact. Toda y, 400 Israelis are
-                            employed in the company’s offices in Be’er - Sheva and
-                            Herzliya. Following a brief stint from 2006 to 2008 as
-                            chief of staff to then - opposition leader Benjamin
-                            Netanyahu, in 2009 Mr. Bennett became CEO of Soluto, a
-                            startup specializing i n cloud computing services.
-                            That company was sold to Asurion, another American
-                            company, for $130 million in 2013.
-                          </p>
-                          <br />
-                          <p>
-                            Prior to, during, and following Mr. Bennett’s high -
-                            tech career, he assumed strategic roles in the Israel
-                            Defense Forces. He became a commander in the Maglan ,
-                            a unit that specializes in operating behind enemy
-                            lines. While he was living in the United States, he
-                            repeatedly traveled to Israel to perform reserve duty.
-                            He served during both intifadas and in the second
-                            Lebanon War in 2006.
-                          </p>
-                          <br />
-                          <p>
-                            Mr. Bennett’ s political career began in earnest in
-                            2012 when he became the leader of the Jewish Home
-                            party. Between 2013 and 2021 he held significant
-                            cabinet positions, including minister of economy,
-                            minister of Jerusalem and diaspora affairs, minister
-                            of religious se rvices, minister of education,
-                            minister of defense, and finally prime minister in
-                            2021, when he formed a broad coalition and led the
-                            most diverse government in Israel’s history.
-                          </p>
-                          <br />
-                          <p>
-                            And throughout his political service, he looked to the
-                            Technion for leadership and partnership in many
-                            initiatives. “The Technion is one of Israel’s national
-                            treasures — a national treasure that is central to
-                            Israel’s success and national security,” Mr. Bennett
-                            said. The former prime minister lauded the Technion’s
-                            commitment to exc ellence in education. When he was
-                            minister of education and saw the steady decline in
-                            advanced high school mathematics as a national crisis,
-                            he sought help from the Technion
-                          </p>
-                          <br />
-                          <p>
-                            “The Technion sent people into the high schools to
-                            encourage these studies, and the Technion was the
-                            first university in Israel to change the incentive
-                            structure for these kids. And when I believed Israel
-                            needed to take a quantum leap in quantum studies, i t
-                            was the Technion that took charge.”
-                          </p>
-                          <br />
-                          <p>
-                            Mr. Bennett also praised the Technion’s determination
-                            to advance STEM studies by women, Arab Israelis, and
-                            the ultra - Orthodox. “At the Technion today, one out
-                            of every two freshmen is a woman. That’s amazing in
-                            scien ce and technology.” Beyond education, Mr.
-                            Bennett is keenly aware of the Technion’s role in the
-                            development and security of Israel, calling the
-                            Technion the backbone behind the nation’s air force,
-                            defense services, and world - renowned high - tech
-                            industry.
-                          </p>
-                          <br />
-                          <p>
-                            “The Technion is part of the foundation of Israel’s
-                            national security and economy,” he said. He believes
-                            that to thrive in the region, Israel needs to be a
-                            generation ahead — not just in defense, but also in
-                            water conservation and technologies, energy,
-                            cybersecurity, climate change, and more. Strength in
-                            science and technology gives Israel its edge, and
-                            according to Mr. Bennett, the Technion and its alumni
-                            make that possible.{" "}
-                          </p>
-                          <br />
-                          <p>
-                            “Israel would not be the Startup Nation without the
-                            Technion, full stop. I can ’t imagine a better ROI for
-                            Israel’s prosperity, national security, and social
-                            coherence than investing in the Technion.”
-                          </p>
-                        </div>
-                    </div>
+                  <div className="content">
+                    <div className="heading">
+                        <h4>Naftali Bennett: Technion Pride</h4>
+                        <p className="cursive font-bold mt-3 leading-normal">
+                          Naftali Bennett, Israel’s 13th prime minister and a
+                          Haifa native, may have obtained a law degree, but the
+                          high-tech entrepreneur has the spirit, drive, and
+                          pride of the Technion at his core.
+                        </p>
+                        <p className="mt-3">
+                          “I grew up in the Technion; it was really central to
+                          my identity,” the former prime minister said in a
+                          recent interview with ATS staff.
+                        </p>
+                        <br />
+                        <p>
+                          His father, Jim Bennett, worked in the Technion’s
+                          fundraising department. “Every Friday, my family would
+                          go to the Technion pool, and I’d watch my f ather play
+                          basketball. It was just a fundamental part of who I
+                          was.”
+                        </p>
+                        <br />
+                        <p>
+                          Growing up in the Technion’s shadow also created high
+                          expectations and pride. “The Technion projected an
+                          aura of excellence and science into the city.” The
+                          Technion’s leading role in hig h tech and
+                          entrepreneurship also clearly impacted the former
+                          prime minister. In 1996, Mr. Bennett began pursuing a
+                          degree in law at The Hebrew University of Jerusalem,
+                          while at the same time starting work for a software
+                          company.
+                        </p>
+                        <br />
+                        <p>
+                          By 1999, he had co - founded an anti - fraud company
+                          in New York called Cyota. He served as its chief
+                          executive officer until Cyota was sold in 2005 to U.S.
+                          - based RSA Security for $145 million. Always a
+                          staunch Zionist, he included a stipulation that the
+                          Israeli arm remain intact. Toda y, 400 Israelis are
+                          employed in the company’s offices in Be’er - Sheva and
+                          Herzliya. Following a brief stint from 2006 to 2008 as
+                          chief of staff to then - opposition leader Benjamin
+                          Netanyahu, in 2009 Mr. Bennett became CEO of Soluto, a
+                          startup specializing i n cloud computing services.
+                          That company was sold to Asurion, another American
+                          company, for $130 million in 2013.
+                        </p>
+                        <br />
+                        <p>
+                          Prior to, during, and following Mr. Bennett’s high -
+                          tech career, he assumed strategic roles in the Israel
+                          Defense Forces. He became a commander in the Maglan ,
+                          a unit that specializes in operating behind enemy
+                          lines. While he was living in the United States, he
+                          repeatedly traveled to Israel to perform reserve duty.
+                          He served during both intifadas and in the second
+                          Lebanon War in 2006.
+                        </p>
+                        <br />
+                        <p>
+                          Mr. Bennett’ s political career began in earnest in
+                          2012 when he became the leader of the Jewish Home
+                          party. Between 2013 and 2021 he held significant
+                          cabinet positions, including minister of economy,
+                          minister of Jerusalem and diaspora affairs, minister
+                          of religious se rvices, minister of education,
+                          minister of defense, and finally prime minister in
+                          2021, when he formed a broad coalition and led the
+                          most diverse government in Israel’s history.
+                        </p>
+                        <br />
+                        <p>
+                          And throughout his political service, he looked to the
+                          Technion for leadership and partnership in many
+                          initiatives. “The Technion is one of Israel’s national
+                          treasures — a national treasure that is central to
+                          Israel’s success and national security,” Mr. Bennett
+                          said. The former prime minister lauded the Technion’s
+                          commitment to exc ellence in education. When he was
+                          minister of education and saw the steady decline in
+                          advanced high school mathematics as a national crisis,
+                          he sought help from the Technion
+                        </p>
+                        <br />
+                        <p>
+                          “The Technion sent people into the high schools to
+                          encourage these studies, and the Technion was the
+                          first university in Israel to change the incentive
+                          structure for these kids. And when I believed Israel
+                          needed to take a quantum leap in quantum studies, i t
+                          was the Technion that took charge.”
+                        </p>
+                        <br />
+                        <p>
+                          Mr. Bennett also praised the Technion’s determination
+                          to advance STEM studies by women, Arab Israelis, and
+                          the ultra - Orthodox. “At the Technion today, one out
+                          of every two freshmen is a woman. That’s amazing in
+                          scien ce and technology.” Beyond education, Mr.
+                          Bennett is keenly aware of the Technion’s role in the
+                          development and security of Israel, calling the
+                          Technion the backbone behind the nation’s air force,
+                          defense services, and world - renowned high - tech
+                          industry.
+                        </p>
+                        <br />
+                        <p>
+                          “The Technion is part of the foundation of Israel’s
+                          national security and economy,” he said. He believes
+                          that to thrive in the region, Israel needs to be a
+                          generation ahead — not just in defense, but also in
+                          water conservation and technologies, energy,
+                          cybersecurity, climate change, and more. Strength in
+                          science and technology gives Israel its edge, and
+                          according to Mr. Bennett, the Technion and its alumni
+                          make that possible.{" "}
+                        </p>
+                        <br />
+                        <p>
+                          “Israel would not be the Startup Nation without the
+                          Technion, full stop. I can ’t imagine a better ROI for
+                          Israel’s prosperity, national security, and social
+                          coherence than investing in the Technion.”
+                        </p>
+                      </div>
                   </div>
                 </div>
+              </div>
               </section>
             </div>
             <div className="modal-footer">
