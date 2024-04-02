@@ -500,15 +500,6 @@ const Home = ({ data, blog, roadmap, values }) => {
                 </div>
               </section>
             </div>
-            <div className="modal-footer">
-              <button
-                type="button"
-                className="btn btn-secondary"
-                data-bs-dismiss="modal"
-              >
-                Close
-              </button>
-            </div>
           </div>
         </div>
       </div>

@@ -2190,9 +2190,11 @@ ul.footer_links li {
         margin: 0;
         }
     }
-    @media (min-width: 633px) {.modal-dialog{
+    @media (min-width: 633px) {
+        .modal-dialog{
         width: 100% ;
         margin: 0 auto;
+        max-width: 100%;
     }}
 }
 
