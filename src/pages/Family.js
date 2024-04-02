@@ -173,6 +173,7 @@ for(var k = 0 ; k<gridData.length; k++)
   {
     Images.push({
       img_url: gridData[k].featured_image[j],
+      quote : gridData[k].quote
   });
 
   }
@@ -475,7 +476,7 @@ var newArr = Images.slice(3, Images.length-1);
                     ?
                     <div class="card">
                       <div class="card-image" key={index}>
-                        <a data-fancybox="gallery" href={res.img_url}   data-caption="American Technion Society">
+                        <a data-fancybox="gallery" href={res.img_url}   data-caption="Lorem Ipsum is simply dummy text of the printing and typesetting industry">
                           <img alt="imgage" title="image" class="rounded" src={res.img_url} />
                         </a>
                       </div>
@@ -488,7 +489,7 @@ var newArr = Images.slice(3, Images.length-1);
                     {newArr.map((val, index) => (
                       <div class="card" key={index}>
                         <div class="card-image">
-                          <a data-fancybox="gallery" href={val.img_url}>
+                          <a data-fancybox="gallery" href={val.img_url} data-caption="Lorem Ipsum is simply dummy text of the printing and typesetting industry">
                             <img alt="imgage" title="image" class="rounded" src={val.img_url} />
                           </a>
                         </div>
