@@ -381,7 +381,6 @@ const Home = ({ data, blog, roadmap, values }) => {
                           my identity,” the former prime minister said in a
                           recent interview with ATS staff.
                         </p>
-                        <br />
                         <p>
                           His father, Jim Bennett, worked in the Technion’s
                           fundraising department. “Every Friday, my family would
@@ -389,7 +388,6 @@ const Home = ({ data, blog, roadmap, values }) => {
                           basketball. It was just a fundamental part of who I
                           was.”
                         </p>
-                        <br />
                         <p>
                           Growing up in the Technion’s shadow also created high
                           expectations and pride. “The Technion projected an
@@ -401,7 +399,6 @@ const Home = ({ data, blog, roadmap, values }) => {
                           while at the same time starting work for a software
                           company.
                         </p>
-                        <br />
                         <p>
                           By 1999, he had co - founded an anti - fraud company
                           in New York called Cyota. He served as its chief
@@ -417,7 +414,6 @@ const Home = ({ data, blog, roadmap, values }) => {
                           That company was sold to Asurion, another American
                           company, for $130 million in 2013.
                         </p>
-                        <br />
                         <p>
                           Prior to, during, and following Mr. Bennett’s high -
                           tech career, he assumed strategic roles in the Israel
@@ -428,7 +424,6 @@ const Home = ({ data, blog, roadmap, values }) => {
                           He served during both intifadas and in the second
                           Lebanon War in 2006.
                         </p>
-                        <br />
                         <p>
                           Mr. Bennett’ s political career began in earnest in
                           2012 when he became the leader of the Jewish Home
@@ -440,7 +435,6 @@ const Home = ({ data, blog, roadmap, values }) => {
                           2021, when he formed a broad coalition and led the
                           most diverse government in Israel’s history.
                         </p>
-                        <br />
                         <p>
                           And throughout his political service, he looked to the
                           Technion for leadership and partnership in many
@@ -462,7 +456,6 @@ const Home = ({ data, blog, roadmap, values }) => {
                           needed to take a quantum leap in quantum studies, i t
                           was the Technion that took charge.”
                         </p>
-                        <br />
                         <p>
                           Mr. Bennett also praised the Technion’s determination
                           to advance STEM studies by women, Arab Israelis, and
@@ -475,7 +468,6 @@ const Home = ({ data, blog, roadmap, values }) => {
                           defense services, and world - renowned high - tech
                           industry.
                         </p>
-                        <br />
                         <p>
                           “The Technion is part of the foundation of Israel’s
                           national security and economy,” he said. He believes
@@ -487,7 +479,6 @@ const Home = ({ data, blog, roadmap, values }) => {
                           according to Mr. Bennett, the Technion and its alumni
                           make that possible.{" "}
                         </p>
-                        <br />
                         <p>
                           “Israel would not be the Startup Nation without the
                           Technion, full stop. I can ’t imagine a better ROI for
