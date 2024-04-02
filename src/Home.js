@@ -323,7 +323,7 @@ const Home = ({ data, blog, roadmap, values }) => {
                 <h4 className="mt-4">{blogModalData.title}</h4>
                 <div class="text-[17px] mt-2 mb-2">{blogModalData.author}</div>
                 {blogModalData.content && (
-                  <p>{parse(`${blogModalData.content}`)}</p>
+                  <>{parse(`${blogModalData.content}`)}</>
                 )}
                 {blogModalData.quote && (
                   <p>{parse(`${blogModalData.quote}`)}</p>
