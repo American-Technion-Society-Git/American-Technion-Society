@@ -122,7 +122,6 @@ const About = ({ blog, roadmap }) => {
                 <br />
                 <img width={"100%"} src={blogModalData.featured_image} />
                 <br />
-                <br />
                 <p>{parse(`${blogModalData.description}`)}</p>
               </div>
             </div>

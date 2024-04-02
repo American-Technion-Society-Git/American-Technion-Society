@@ -250,9 +250,7 @@ console.log(data);
                   />
                 </div>
                 <h4 className="mt-4">{blogModalData.title}</h4>
-                <h5 className="mt-2">{blogModalData.author}</h5>
-
-                <br />
+                <div className="text-[17px] mt-2 mb-2">{blogModalData.author}</div>
                 {parse(`${blogModalData.content}`)}
               </div>
             </div>

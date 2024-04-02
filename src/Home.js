@@ -321,8 +321,7 @@ const Home = ({ data, blog, roadmap, values }) => {
                 <br />
                 <img width={"100%"} src={blogModalData.image} />
                 <h4 className="mt-4">{blogModalData.title}</h4>
-                <div class="text-[17px]">{blogModalData.author}</div>
-                <br />
+                <div class="text-[17px] mt-2 mb-2">{blogModalData.author}</div>
                 {blogModalData.content && (
                   <p>{parse(`${blogModalData.content}`)}</p>
                 )}
@@ -616,31 +615,28 @@ const Home = ({ data, blog, roadmap, values }) => {
         </div>
        
 
-        <div className="grid grid-cols-1 xl:grid-cols-2 justify-items-center gap-y-4 mt-4">
+        <div className="home_blog row">
           {posts.map((res, index) => {
             ScrollTrigger.refresh();
             const route = res.title.toLowerCase().replace(/\s+/g, "-");
             return (
               <div
                 key={index}
-                className="relative w-[300px] h-[200px] md:w-[495px] md:h-[300px] overflow-hidden group mb-3"
+                className="mb-4 col-sm-6 home_blog_box"
               >
                 <img
                   src={res.image}
                   alt="Blog Image"
-                  className="absolute z-40 hover:z-0 hover:opacity-20 object-cover w-full h-full"
                   onClick={() => {
                     setBlogModalData(res);
                   }}
                 />
                 <div
-                  className="
-                    absolute top-0 left-0 w-full h-full bg-[#031523] hover:z-40  bg-opacity-80 cursor-pointer
-                  "
+                  className="home_blog_detail"
                   onClick={() => handleClick(index)}
                 >
                   <div className="flex flex-col gap-2 items-center justify-center text-center h-full w-full px-8 text-white font-semibold">
-                    <h4
+                    <h4 className="text-center"
                       onClick={() => {
                         setBlogModalData(res);
                       }}
