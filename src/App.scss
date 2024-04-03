@@ -2359,6 +2359,38 @@ color: slategray !important;
       }
     }
   }
+  
+@media only screen and (max-width: 1024px){
+    .drop_img .card-image .drop_box h4 {
+        font-size: 16px;
+    }
+    .drop_img .card-image .drop_box p {
+        font-size: 15px !important;
+        padding: 0 !important;
+    }
+    .story_main .story_container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .story_main .story_container_2 {
+        grid-template-columns: 1fr;
+    }
+    .story_main .story_container_row {
+        grid-template-columns: repeat(2,1fr);
+    }
+    .drop_img .card-image .drop_box {
+        width: 100%;
+        justify-content: center;
+    }
+}
+@media only screen and (max-width: 600px){
+    .story_main .story_container {
+        grid-template-columns: repeat(1,1fr);
+    }
+    .story_main .story_container_row {
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+
   @media (max-width: 1100px) {
     .home_roadmap .roadmap_list1 p {
         font-size: 14px !important;
